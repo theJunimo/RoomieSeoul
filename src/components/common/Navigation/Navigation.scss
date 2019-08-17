@@ -1,0 +1,21 @@
+@import 'styles/utils';
+
+.nav {
+    color: $fontGray;
+
+    &.main {
+        &:active, &:hover {
+            color: $darkerYellow;
+            font-weight: 500;
+        }
+    }
+
+    &.sub {
+        font-size: 0.9rem;
+        margin-left: 5px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

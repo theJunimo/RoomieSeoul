@@ -1,10 +1,11 @@
 import React from 'react';
+import PageTemplate from 'components/common/PageTemplate';
 
 const MainPage = () => {
     return (
-        <div>
+        <PageTemplate>
             Home
-        </div>
+        </PageTemplate>
     );
 };
 

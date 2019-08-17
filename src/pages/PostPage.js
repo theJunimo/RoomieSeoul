@@ -1,10 +1,11 @@
 import React from 'react';
+import PageTemplate from 'components/common/PageTemplate';
 
 const PostPage = () => {
     return (
-        <div>
+        <PageTemplate>
             PostPage
-        </div>
+        </PageTemplate>
     );
 };
 

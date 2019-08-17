@@ -1,4 +1,13 @@
 @import 'lib/all';
 
+$basicBlue: #53b4e0;
+$basicYellow: #fab300;
+$darkerYellow: #eba800;
+
+//기본 글자 색상
+$fontGray: #343a40;
+
 /*반응형 디자인 시 참조할 구간*/
 $breakpoints: (small: 320px, medium: 768px, large: 1024px, wide: 1400px);
+
+

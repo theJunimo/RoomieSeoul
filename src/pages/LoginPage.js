@@ -1,12 +1,13 @@
 import React from 'react';
 import PageTemplate from 'components/common/PageTemplate';
+import LoginForm from 'components/form/LoginForm';
 
-const LikedPostPage = () => {
+const LoginPage = () => {
     return (
         <PageTemplate>
-            LikedPostPage
+            <LoginForm />
         </PageTemplate>
     );
 };
 
-export default LikedPostPage;
+export default LoginPage;

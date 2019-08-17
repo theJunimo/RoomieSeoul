@@ -1,5 +1,5 @@
 /* body, 타이포그래피 등 기본 스타일 설정 */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap&subset=korean');
 
 
 body {
@@ -14,6 +14,12 @@ body {
 //If you set box-sizing: border-box; on an element padding and border are included in the width and height
 * {
     box-sizing: inherit;
+}
+
+ul {
+    list-style-type : none;
+    margin: 0;
+    padding: 0;
 }
 
 //링크 스타일 밑줄 및 색상 무효화

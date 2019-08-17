@@ -1,0 +1,36 @@
+@import 'styles/utils';
+
+.container{
+    margin: 0 auto;
+    width: 325px;
+
+    .login-form {
+        margin-bottom: 1rem;
+
+        .field{
+            margin-top: 1rem; 
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-size: 1rem;
+                color: $fontGray;
+            }
+
+            input {
+                margin-top: 0.5rem;
+                padding: 13px 10px;
+                border: 1px solid #e8e8e8;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .field-row {
+        display: flex;
+
+        span {
+            font-size: 0.9rem;
+        }
+    }
+}
