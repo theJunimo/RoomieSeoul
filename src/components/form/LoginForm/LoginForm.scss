@@ -1,6 +1,7 @@
 @import 'styles/utils';
 
 .container{
+    color: $fontGray;
     margin: 0 auto;
     width: 325px;
 
@@ -33,4 +34,9 @@
             font-size: 0.9rem;
         }
     }
+
+    .margin-top-3 {
+        margin-top: 3rem;
+    }
 }
+

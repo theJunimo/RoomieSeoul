@@ -25,9 +25,12 @@ const LoginForm = () => {
             </div>
             <div className={cx('field-row')}>
                 <span>아직 회원이 아니신가요?</span>
+                <div className={cx('magin-bottom')}/>
                 <Navigation theme='sub' to='/signup'>회원가입</Navigation>
             </div>
+            <div className={cx('margin-top-3')}>
             <SnsLogin />
+            </div>
         </div>
     );
 }

@@ -11,8 +11,8 @@ const App = () => {
                 <Route exact path="/signup" component={SignUpPage} />
                 <Route exact path="/post/:postid" component={PostPage} />
                 <Route exact path="/write" component={WritingPostPage} />
-                <Route exact path="/likedpost" component={LikedPostListPage} />
-                <Route exact path="/mypage" component={MyPage} />
+                <Route path="/likedpost/:uerId" component={LikedPostListPage} />
+                <Route path="/mypage/:userId" component={MyPage} />
                 <Route component={NotFoundPage}/>  
             </Switch>
         </div>

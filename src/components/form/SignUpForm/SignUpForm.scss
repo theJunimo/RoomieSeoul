@@ -1,0 +1,40 @@
+@import 'styles/utils';
+
+.dividerLine {
+    @include dividerLine;
+}
+
+.container {
+    color: $fontGray;
+    
+    h2 {
+        text-align: center;
+    }
+
+    .signUp-form {
+
+        .field {
+            margin-top: 1rem; 
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-size: 1rem;
+                color: $fontGray;
+            }
+
+            input {
+                margin-top: 0.5rem;
+                padding: 13px 10px;
+                border: 1px solid #e8e8e8;
+                border-radius: 5px;
+            }
+        }
+
+    }
+    
+    .margin-top-3 {
+        margin-top: 3rem;
+    }
+
+}
