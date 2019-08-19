@@ -13,6 +13,7 @@
     }
 
     .footer-content{
+
         width: 1400px;
         margin: 0 auto;
         padding-left: 3rem;
@@ -21,11 +22,17 @@
         display: flex;
         align-items: left;
         flex-direction: column;
+        
+        .logo {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
 
         .clientService { //고객센터 정보
             //폰트 
             color: #343a40;
-            font-size: 1rem;
+            font-size: 0.9rem;
 
             //내용 정렬
             display: flex;
@@ -37,6 +44,12 @@
             //폰트 
             color: #343a40;
             font-size: 0.8rem;
+
+            margin-top: 1rem;
+
+            #copyright {
+                margin-top: 0.5rem;
+            }
         }
     }
 }

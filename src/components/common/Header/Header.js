@@ -20,7 +20,7 @@ const MenuBfLogin = () => (
 );
 
 //로그인 후 메뉴
-const MenuAfLogin = ({userId, userName = '주혜인'}) => {
+const MenuAfLogin = ({userId, userName = '홍길동'}) => {
     return(
         <div className={cx('margin-left-auto')}>
             <div className={cx('menu-wrap')}>
@@ -43,7 +43,7 @@ const MenuAfLogin = ({userId, userName = '주혜인'}) => {
 }
 
 //헤더
-const Header = ({loginStatus}) => {
+const Header = ({loginStatus = true}) => {
     const Menu = loginStatus? MenuAfLogin : MenuBfLogin;
 
     return (

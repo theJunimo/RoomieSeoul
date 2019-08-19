@@ -7,16 +7,16 @@ const cx = classNames.bind(styles);
 const Footer = () => (
     <footer className = {cx('footer')}>
         <div className = {cx('footer-content')}>
+            <Link to = "/" className={cx('logo')}>ROOMIE SEOUL</Link>
             <div className = {cx('clientService')}>
-                <p>고객센터 ></p>
+                <p>고객센터</p>
                 <p>평일 9:00~18:20 (점심시간 13:20~14:30 / 주말&공휴일도 괜찮아요!)</p>
             </div>
             <div className = {cx('detail')}>
-                <Link to = "/">상호명: ROOMIE SEOUL</Link><br/>
-                <p>개발자: 주혜인</p>
+                <p>개발자: theJunimo</p>
                 <a href = "mailto:hyein.ju92@gmail.com">이메일: hyein.ju92@gmail.com</a><br/>
-                <p>주소: 서울특별시 광진구 중곡동 천호대로 어딘가 루미서울</p>
-                <p>Copyright © 2019 by ROOMIESEOUL Inc All Rights Reserved</p>
+                <p>블로그: <span>👉</span><a href="https://sustainable-dev.tistory.com/">지속가능한 개발 블로그로 가기</a></p>
+                <p id="copyright">Copyright © 2019 by ROOMIESEOUL Inc All Rights Reserved</p>
             </div>
         </div>
     </footer>
