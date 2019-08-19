@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { MainPage, LoginPage, SignUpPage, PostPage, WritingPostPage, LikedPostListPage, MyPage, NotFoundPage } from 'pages'
+import { MainPage, LoginPage, SignUpPage, PostPage, WritingPostPage, LikedPostListPage, MyPage, NotFoundPage } from 'pages';
 
 const App = () => {
     return (

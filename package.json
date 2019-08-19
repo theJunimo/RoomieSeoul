@@ -135,5 +135,11 @@
     "presets": [
       "react-app"
     ]
+  },
+  "compilerOptions": {
+    "baseUrl": "./src"
   }
 }
+
+
+
