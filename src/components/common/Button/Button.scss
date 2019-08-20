@@ -36,4 +36,58 @@
 
         margin-top: 5px;
     }
+
+    &.yes {
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+
+        width: 5rem;
+        margin-top: 2rem;
+        padding: 3px 10px;
+        
+
+        background-color: $basicYellow;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        box-shadow: 0 3px #b9bdba;
+
+
+        &:hover{
+            background-color: $darkerYellow;
+        }
+
+        &:active{
+            background-color: $darkerYellow;
+            box-shadow: 0 1px #b9bdba;
+            transform: translateY(4px);
+        }
+    }
+
+    &.no {
+        font-size: 0.9rem;
+        color: $fontGray;
+        text-align: center;
+        font-weight: bold;
+
+        width: 5rem;
+        margin-top: 2rem;
+        padding: 3px 10px;
+        
+        background-color: $lightGray;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        box-shadow: 0 3px #b9bdba;
+
+        &:hover{
+            background-color: #d1d1d1;
+        }
+
+        &:active{
+            background-color: #d1d1d1;
+            box-shadow: 0 1px #b9bdba;
+            transform: translateY(4px);
+        }
+    }
 }

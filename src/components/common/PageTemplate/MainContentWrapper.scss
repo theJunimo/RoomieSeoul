@@ -1,10 +1,16 @@
 @import 'styles/utils';
 
 .mainContent-wrapper{
+    //내용 가운데 정렬
+    display: flex;
+    align-content: center;
+
+    flex-direction: column;
+
     width: 1400px;
     margin: 0 auto;
 
-    padding: 3rem 3rem;
+    padding: 4rem 4rem;
 
     @include media("<wide") {
         width: 768px;
@@ -16,7 +22,4 @@
         width: 100%;
     }
 
-    //내용 가운데 정렬
-    display: flex;
-    align-content: center;
 }

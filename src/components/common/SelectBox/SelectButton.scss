@@ -1,0 +1,33 @@
+@import 'styles/utils';
+
+.selectButton {
+    //폰트 설정
+    color: $fontGray;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+    //div 설정
+    background-color: #e9ecef;
+    padding: 5px 17px;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    //display 설정
+    display: flex;
+
+    .inner {
+        margin-left: 10px;
+        
+        .arrow {
+            position: relative;
+            top: 4px;
+            height: 10px;
+            width: 10px;
+            border-style: solid;
+            border-color: $fontGray;
+            border-width: 0px 2px 2px 0px;
+            transform: rotate(45deg);
+            }
+    }
+}

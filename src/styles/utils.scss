@@ -3,6 +3,7 @@
 $basicBlue: #53b4e0;
 $basicYellow: #fab300;
 $darkerYellow: #eba800;
+$lightGray: #e9ecef;
 
 //기본 글자 색상
 $fontGray: #343a40;
@@ -13,4 +14,8 @@ $breakpoints: (small: 320px, medium: 768px, large: 1024px, wide: 1400px);
 @mixin dividerLine {
     margin: 1.5rem 0;
     border-bottom: solid 1px #e9ecef;
+}
+
+@mixin block-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

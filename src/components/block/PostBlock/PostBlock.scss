@@ -1,0 +1,87 @@
+@import 'styles/utils';
+
+.blockOuter {
+    width: 400px;
+    border-radius: 15px;
+    border: 1px solid $lightGray;
+    overflow: hidden;
+    color: $fontGray;
+
+    margin-bottom: 2rem;
+
+    cursor: pointer;
+
+    &:hover {
+        @include block-shadow;
+    }
+    
+    p {
+        margin: 0;
+    }
+    .imgWrapper {
+        background-color: lightblue;
+        height: 230px;
+        
+    }
+
+    .infoWrapper {
+        padding: 10px 0;
+        .upper {
+            display: flex;
+            padding: 1rem 1.5rem 0 1.5rem;
+
+            .userInfo {
+                display: flex;
+                
+                .userImg {
+                    background-color: black;
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+                }
+
+                .userName {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 0.5rem;
+                }
+            }
+
+            .likeIcon {
+                margin-left: auto;
+                z-index: 10;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+
+        .bottom {
+            padding: 1rem 1.5rem;
+            .roomType {
+                font-weight: bold;
+                color: #495057;
+            }
+
+            .payment {
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+
+            .address {
+                font-size: 0.9rem;
+            }
+
+            .gender {
+                font-size: 0.9rem;
+            }
+            
+            .title {
+                font-weight: bold;
+                color: #495057;
+            }
+        }
+    }
+}

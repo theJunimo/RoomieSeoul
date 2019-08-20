@@ -1,0 +1,22 @@
+@import 'styles/utils';
+
+.outer{
+    width: 100%;
+    .filter {
+        display: flex;
+
+        .support {
+            display: flex;
+            align-items: center;
+
+            color: $fontGray;
+            font-size: 0.9rem;
+
+            margin-left: auto;
+        }
+    }
+
+    .selected{
+        margin-top: 0.5rem;
+    }
+}

@@ -1,0 +1,15 @@
+@import 'styles/utils';
+
+.selectedButton {
+    display: inline-flex;
+    background-color: $basicBlue;
+    border-radius: 5px;
+    padding: 5px 12px;
+
+    color: white;
+    font-size: 0.9rem;
+
+    & + & {
+        margin-right: 0.8rem;
+    }
+}

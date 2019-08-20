@@ -1,0 +1,10 @@
+@import 'styles/utils';
+
+.modalOuter {
+    background-color: white;
+    border: 1px solid $lightGray;
+    
+    .options {
+        display: flex;
+    }
+}

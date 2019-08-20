@@ -1,0 +1,30 @@
+@import 'styles/utils';
+
+.list-box {
+    color: $fontGray;
+    width: 80px;
+    border: 1px solid #adb5bd;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.08);
+
+    :first-child {
+        border-radius: 4px 4px 0 0;
+    }
+
+    :last-child {
+        border-radius: 0 0 4px 4px;
+    }
+
+    .item {
+        font-size: 0.9rem;
+        padding: 6px;
+        align-items: center;
+        text-align: center;
+
+        cursor: pointer;
+        
+        &:hover {
+            background-color: #f1f3f5;
+        }
+    }
+}

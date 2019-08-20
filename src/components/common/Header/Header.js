@@ -20,7 +20,7 @@ const MenuBfLogin = () => (
 );
 
 //로그인 후 메뉴
-const MenuAfLogin = ({userId, userName = '홍길동'}) => {
+const MenuAfLogin = ({userId, userName = 'Junimo'}) => {
     return(
         <div className={cx('margin-left-auto')}>
             <div className={cx('menu-wrap')}>
