@@ -6,8 +6,8 @@ import Button from 'components/common/Button';
 
 const cx = className.bind(styles);
 
-const CancelLikeModal = ({}) => (
-    <ModalWrapper>
+const CancelLikeModal = () => (
+    <ModalWrapper type='cancelLike'>
     <div className={cx('modalOuter')}>
         <div>
             정말로 찜 목록에서 삭제하실 건가요?

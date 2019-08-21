@@ -7,7 +7,7 @@ import CancelLikeModal from 'components/modal/CancelLikeModal';
 const LikedPostPage = () => {
     return (
         <PageTemplate>
-            <CancelLikeModal />
+            {/*<CancelLikeModal />*/}
             <LikedPostFilter />
             <LikedPostList></LikedPostList>
         </PageTemplate>

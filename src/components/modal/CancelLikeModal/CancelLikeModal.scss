@@ -3,8 +3,12 @@
 .modalOuter {
     background-color: white;
     border: 1px solid $lightGray;
+
+    padding: 1rem 2rem;
     
     .options {
         display: flex;
+        margin-top: 1rem;
+        justify-content: space-evenly;
     }
 }

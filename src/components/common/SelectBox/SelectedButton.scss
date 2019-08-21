@@ -8,6 +8,18 @@
 
     color: white;
     font-size: 0.9rem;
+    font-weight: bold;
+
+    .inner {
+        display:flex;
+        align-items: center;
+        margin-left: 5px;
+        cursor: pointer;
+        
+        .close {
+            display: flex;
+        }
+    }
 
     & + & {
         margin-right: 0.8rem;
