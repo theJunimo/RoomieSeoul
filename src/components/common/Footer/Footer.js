@@ -14,8 +14,8 @@ const Footer = () => (
             </div>
             <div className = {cx('detail')}>
                 <p>개발자: Junimo</p>
-                <a href = "mailto:hyein.ju92@gmail.com">이메일: hyein.ju92@gmail.com</a><br/>
-                <p>블로그: <span role="img" aria-label="point">👉</span><a href="https://sustainable-dev.tistory.com/">지속가능한 개발 블로그로 가기</a></p>
+                <a href = 'mailto:hyein.ju92@gmail.com'>이메일: hyein.ju92@gmail.com</a><br/>
+                <p>블로그: <span role="img" aria-label='point'>👉</span><a href = 'https://sustainable-dev.tistory.com/' target='_blank' rel='noopener noreferrer'>지속가능한 개발 블로그로 가기</a></p>
                 <p id="copyright">Copyright © 2019 by ROOMIESEOUL Inc All Rights Reserved</p>
             </div>
         </div>

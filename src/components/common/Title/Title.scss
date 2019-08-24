@@ -1,0 +1,12 @@
+@import 'styles/utils';
+
+.titleOuter {
+    display:flex;
+    .title {
+        margin: auto;
+        color: $fontGray;
+        font-size: 1.7rem;
+        font-weight:bold;
+        
+    }
+}

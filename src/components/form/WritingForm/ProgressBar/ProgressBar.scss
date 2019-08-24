@@ -1,0 +1,43 @@
+@import 'styles/utils';
+
+.barDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    .bar{
+        display: inline-block;
+        width: 6.3rem;
+        height: 0.3rem;
+
+        &.complete1{
+            background-color: #a5d8ff;
+        }
+
+        &.complete2{
+            background-color: #74c0fc;
+        }
+          
+        &.complete3{
+            background-color: #4dabf7;
+        }
+
+        &.complete4{
+            background-color: #339af0;
+        }
+
+        &.complete5{
+            background-color: #228be6;
+        }
+
+        &.complete6{
+            background-color: #1c7ed6;
+        }
+
+        &.uncomplete {
+            background-color: $lightGray;
+        }
+    }
+}

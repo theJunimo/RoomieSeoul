@@ -1,0 +1,92 @@
+@import 'styles/utils';
+
+.roomtypeFieldDiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    .subTitleDiv{
+        margin-bottom: 1rem;
+        text-align: center;
+
+        .subTitle {
+            color: $fontGray;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        .roomTypeItem {
+            text-align: center;
+            width: 7rem;
+            padding: 0.9rem 1.3rem;
+            border-radius: 5px;
+            border: 3px solid $lightGray;
+
+            font-size: 1rem;
+            color: $fontGray;
+
+            cursor:pointer;
+
+
+            &:hover{
+                border: 3px solid #74c0fc;
+            }
+
+            &.selected {
+                border: 3px solid #74c0fc;
+            }
+        }
+    }
+    .dividerLine {
+        @include dividerLine;
+    }
+
+    .floor {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        margin-bottom: 10px;
+
+        .slash {
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin: 0 1rem;
+            text-align: center;
+        }
+    }
+
+    .roomCnt {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+
+        .plus{
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin: 0 1rem;
+            text-align: center;
+        }
+    }
+
+    input[type='text'] {
+        padding: 0.8rem 1rem;
+        border: 1px solid $lightGray;
+        width: 100%;
+
+        font-size: 1rem;
+    }
+
+    .buttonDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 4rem;
+        
+        width: 100%;
+    }
+}

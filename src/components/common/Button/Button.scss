@@ -88,4 +88,111 @@
             transform: translateY(4px);
         }
     }
+
+    //다음으로 버튼
+    &.next {
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+
+        padding: 6px 2rem;
+        
+        background-color: $basicYellow;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        box-shadow: 0 3px #b9bdba;
+
+        font-weight: bold;
+        
+        &:hover{
+            background-color: $darkerYellow;
+        }
+
+        &:active{
+            background-color: $darkerYellow;
+            box-shadow: 0 1px #b9bdba;
+            transform: translateY(4px);
+        }
+    }
+
+    //이전으로 버튼
+    &.prev {
+        font-size: 1rem;
+        color: $fontGray;
+        text-align: center;
+
+        padding: 6px 2rem;
+        
+        background-color: $lightGray;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        box-shadow: 0 3px #b9bdba;
+        
+        font-weight: bold;
+
+        &:hover{
+            color: white;
+            background-color: #d1d1d1;
+        }
+
+        &:active{
+            background-color: #d1d1d1;
+            box-shadow: 0 1px #b9bdba;
+            transform: translateY(4px);
+        }
+    }
+
+    //옵션 - 룸메 성별 선택용 버튼
+    &.gender {
+        display: inline-block;
+        padding: 0.5rem 1.4rem;
+        margin-right: 1rem;
+
+        background-color: white;
+        border-radius: 5px;
+        border: 2px solid $lightGray;
+        
+        color: $fontGray;
+        font-size: 1rem;
+
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid #339af0;
+        }
+
+        &.selected {
+            border: 2px solid #339af0;
+        }
+    }
+
+    &.option {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        margin-right: 1rem;
+        margin-top: 0.8rem;
+
+        background-color: white;
+        border-radius: 5px;
+        border: 2px solid $lightGray;
+        
+        color: $fontGray;
+        font-size: 0.9rem;
+
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid $basicBlue;
+            background-color: $basicBlue; 
+            color: white;
+            font-weight: bold;
+        }
+
+        &.selected {
+            border: 2px solid $basicBlue;
+            background-color: $basicBlue; 
+            color: white;
+            font-weight: bold;
+        }
+    }
 }

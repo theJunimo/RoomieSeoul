@@ -4,9 +4,6 @@ import className from 'classnames/bind';
 import Icon from 'components/common/Icon';
 const cx = className.bind(styles);
 
-const click = () => {
-    console.log('하트야 클릭되니?');
-}
 
 const PostBlock = ({img, info, onClick}) => (
     <div className={cx('blockOuter')}>
@@ -19,7 +16,7 @@ const PostBlock = ({img, info, onClick}) => (
                     <div className={cx('userImg')}></div>
                     <div className={cx('userName')}>Junimo</div>
                 </div>
-                <div className={cx('likeIcon')} onClick={click}>
+                <div className={cx('likeIcon')} onClick={onClick}>
                     <Icon type="filledHeart" />
                 </div>
             </div>
@@ -28,7 +25,7 @@ const PostBlock = ({img, info, onClick}) => (
                 <p className={cx('payment')}>월세 1500/30</p>
                 <p className={cx('address')}>서울시 광진구 중곡동 천호대로 117길 78</p>
                 <p className={cx('gender')}>여성 roomie</p>
-                <p className={cx('title')}>하하호호 정다운 집</p>
+                <p className={cx('title')}>하하호호 정다운 집하하호호 정다운 집하하호호 정다운 집하하호호 정다운 집하하호호 정다운 집</p>
             </div>
 
         </div>

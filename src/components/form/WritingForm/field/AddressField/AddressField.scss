@@ -1,0 +1,49 @@
+@import 'styles/utils';
+
+.addressFieldDiv {
+    display: flex;
+    flex-direction: column;
+
+    .subTitleDiv {
+        margin-bottom: 1rem;
+
+        .subTitle {
+            color: $fontGray;
+        }
+    }
+
+    .innerDiv {
+        display: flex;
+
+        .flexColumn {
+            width: 60%;
+            margin:auto;
+
+            input[type='text'] {
+                padding: 0.8rem 1rem;
+                border: 1px solid $lightGray;
+                width: 100%;
+                font-size: 1rem;
+                outline-style: none;
+
+                &.searchAdd {
+                    width: 100%;
+                    cursor: pointer;
+                }
+
+                &.detailAdd {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+    
+    .buttonDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 4rem;
+        
+        width: 100%;
+    }
+}

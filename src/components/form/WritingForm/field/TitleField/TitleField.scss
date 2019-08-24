@@ -1,0 +1,39 @@
+@import 'styles/utils';
+
+.titleFieldDiv {
+    display: flex;
+    flex-direction: column;
+
+    .subTitleDiv{
+        margin-bottom: 1rem;
+
+        .subTitle {
+            color: $fontGray;
+        }
+    }
+    .blueInput {
+        padding: 1rem 1rem;
+        border: 1px solid $lightGray;
+        width: 100%;
+
+        font-size: 1rem;
+    }
+
+    .numOfChaLimit {
+        margin-left:auto;
+    }
+
+    input:focus {
+        border: 1px solid #d0ebff;
+    }
+
+    .buttonDiv {
+        margin: auto;
+        margin-top:2rem;
+    }
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}

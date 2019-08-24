@@ -1,0 +1,82 @@
+@import 'styles/utils';
+
+.othersFieldDiv {
+    display: flex;
+    flex-direction: column;
+    color: $fontGray;
+
+    .subTitleDiv{
+        margin-bottom: 1rem;
+    }
+
+    .innerDiv {
+        margin: auto;
+        .flexColumn {
+            display: flex;
+            flex-direction: column;
+
+            .genderDiv{
+                display: flex;
+                flex-direction: row;
+                margin: auto;
+
+                .title {
+                    display: flex;
+                    font-size: 1.1rem;
+                    text-align: center;
+                    align-items: center;
+
+                }
+
+                .optionList {
+                    display: flex;
+                    margin-left: 4rem;
+                }
+            }
+
+            .optionDiv{
+                display: flex;
+                flex-direction: column;
+
+                .title {
+                    font-size: 1.1rem;
+                    text-align: center;
+                }
+
+                .optionList {
+                    display: flex;
+                    padding: 0 4rem;
+                    margin-top: 1rem;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+                }
+
+                .msg {
+                    display: flex;
+                    margin-top: 0.8rem;
+                    padding: 0 4rem;
+                    font-size: 0.8rem;
+                    color: gray;
+
+                    svg {
+                        margin-top: 2px;
+                    }
+                    
+                    p {
+                        margin: 0;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .buttonDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 4rem;
+        
+        width: 100%;
+    }
+}
