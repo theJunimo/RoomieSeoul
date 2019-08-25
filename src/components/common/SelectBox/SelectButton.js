@@ -4,9 +4,9 @@ import className from 'classnames/bind';
 
 const cx = className.bind(styles);
 
-const SelectButton = ({children, onClick}) => {
+const SelectButton = ({children, onClick, theme}) => {
     return (
-        <div className={cx('selectButton')}
+        <div className={cx('selectButton', theme)}
             onClick = {onClick}>
             {children}
             <div className={cx('inner')}><div className={cx('arrow')}></div></div>

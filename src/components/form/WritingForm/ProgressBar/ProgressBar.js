@@ -4,25 +4,16 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const ProgressBar = ({progress = 'complete1'})=> {
+const ProgressBar = ({currentStep})=> {
+
     return (
         <div className = {cx('barDiv')}>
-            <div className = {cx('bar complete1')}> </div>
-            <div className = {cx('bar complete2')}>
-                
-            </div>
-            <div className = {cx('bar complete3')}>
-                
-            </div>
-            <div className = {cx('bar complete4')}>
-                
-            </div>
-            <div className = {cx('bar complete5')}>
-                
-            </div>
-            <div className = {cx('bar uncomplete')}>
-                
-            </div>
+            <div className = {cx('bar ' + (currentStep > 0? 'complete1' : null))}/>
+            <div className = {cx('bar ' + (currentStep > 1? 'complete2' : null))}/>
+            <div className = {cx('bar ' + (currentStep > 2? 'complete3' : null))}/>
+            <div className = {cx('bar ' + (currentStep > 3? 'complete4' : null))}/>
+            <div className = {cx('bar ' + (currentStep > 4? 'complete5' : null))}/>
+            <div className = {cx('bar ' + (currentStep > 5? 'complete6' : null))}/>
         </div>
     )
 }

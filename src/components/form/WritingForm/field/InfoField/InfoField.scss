@@ -1,0 +1,111 @@
+@import 'styles/utils';
+
+.infoFieldDiv {
+    color: $fontGray;
+
+    .innerDiv {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        .contact {
+            display: flex;
+            margin: auto;
+            width: 26rem;
+            .selectBox{
+                margin-right : 1rem;
+            }
+
+            .contactDiv {
+                display: flex;
+                flex: 1;
+                align-items: center;
+
+                .contactIcon {
+                    //폰트 설정
+                    color: white;
+                    font-weight: bold;
+                    font-size: 0.9rem;
+
+                    //div 설정
+                    background-color: #339af0;
+                    padding: 5px 17px;
+                    border-radius: 5px;
+                }
+                .contactInput{
+                    margin-left: 1rem;
+                    border-bottom: 1px solid $fontGray;
+
+                    input{
+                        width: 13rem;
+                        font-size: 1rem;
+                        border: none;
+                        padding: 0;
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .detailInfoDiv{
+            margin-top: 2rem;
+
+            .detailInfo {
+                width: 40rem;
+                margin: auto;
+                padding: 2rem 2rem 0 2rem;
+                border-radius: 5px;
+                border: 1px solid $lightGray;
+
+                textarea {
+                    width: 100%;
+                    min-height: 20rem;
+                    font-size: 1rem;
+                    border : 0;
+                    outline: none;
+                    resize: none;
+                }
+
+                .limitChaCnt{
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        .attachImg {
+            margin-top: 1rem;
+
+            .fileContainer{
+                input[type='file'] {
+                    outline: none;
+                    font-size: 1rem;
+                }
+            }
+
+            .msg {
+                display: flex;
+                margin-top: 1rem;
+
+                svg {
+                    margin-top: 2px;
+                }
+
+                p{
+                    margin: 0;
+                    padding-left: 5px;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+    }
+
+    .buttonDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 4rem;
+        
+        width: 100%;
+    }
+}

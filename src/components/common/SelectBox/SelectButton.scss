@@ -10,7 +10,6 @@
     background-color: #e9ecef;
     padding: 5px 17px;
     border-radius: 5px;
-
     cursor: pointer;
 
     //display 설정
@@ -29,5 +28,9 @@
             border-width: 0px 2px 2px 0px;
             transform: rotate(45deg);
             }
+    }
+
+    &.width6{
+        width: 6rem;
     }
 }
