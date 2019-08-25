@@ -5,7 +5,7 @@ import Button from 'components/common/Button';
 
 const cx = classNames.bind(styles);
 
-const TitleField = ({cntNumOfCha}) => {
+const TitleField = ({onNextButton, cntNumOfCha}) => {
     return(
     <div className = {cx('titleFieldDiv')}>
         <div className = {cx('subTitleDiv')}>
@@ -14,10 +14,10 @@ const TitleField = ({cntNumOfCha}) => {
             </h2>
         </div>
         <div className = "flexColumn">
-            <input className = {cx('blueInput')}type='text' onKeyUp = {cntNumOfCha}></input>
+            <input className = {cx('titleInput')}type='text' onKeyUp = {cntNumOfCha}></input>
             <div className = {cx('numOfChaLimit')}>50자 제한</div>
         </div>
-        <div className = {cx('buttonDiv')}><Button>다음으로</Button></div>
+        <div className = {cx('buttonDiv')}><Button theme='next' onClick={onNextButton}>다음으로</Button></div>
     </div>
     );
 }

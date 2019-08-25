@@ -25,6 +25,8 @@ class PaymentField extends Component {
     }
 
     render(){
+        const {onPrevButton, onNextButton} = this.props;
+
         const MngFeeField = () => (
             <div className= {cx('flexRow-margin')}>
                 <div>
@@ -74,8 +76,8 @@ class PaymentField extends Component {
                 </div>
                 </div>
                 <div className = {cx('buttonDiv')}>
-                    <Button theme='prev'>이전</Button>
-                    <Button theme='next'>다음</Button>
+                    <Button theme='prev' onClick={onPrevButton}>이전</Button>
+                    <Button theme='next' onClick={onNextButton}>다음</Button>
                 </div>
             </div>
         );

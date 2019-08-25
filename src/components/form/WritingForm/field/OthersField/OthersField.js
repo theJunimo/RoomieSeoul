@@ -10,7 +10,7 @@ const options = ['반려동물', '주차가능', '단기임대',
                     '풀옵션', '빌트인', '엘리베이터', 
                     '생필품 지원', '공과금 포함', '흡연자가능'];
 
-const OthersField = () => {
+const OthersField = ({onPrevButton, onNextButton}) => {
     const genderList = genders.map((item, index) => (
         <Button theme='gender' key={index} value={item}>{item}</Button>
     ))
@@ -60,8 +60,8 @@ const OthersField = () => {
                 </div>
             </div>
             <div className = {cx('buttonDiv')}>
-                <Button theme='prev'>이전으로</Button> 
-                <Button theme='next'>다음으로</Button>
+                <Button theme='prev' onClick={onPrevButton}>이전으로</Button> 
+                <Button theme='next' onClick={onNextButton}>다음으로</Button>
             </div>
         </div>
     );

@@ -59,6 +59,7 @@ class InfoField extends Component {
     render(){
         const {contactType, visible}= this.state;
         const {onClickOptionBox, onClickSelectButton} = this;
+        const {onPrevButton} = this.props;
 
         return(
             <div className = {cx('infoFieldDiv')}>
@@ -108,7 +109,7 @@ class InfoField extends Component {
                     </div>
                 </div>
                 <div className = {cx('buttonDiv')}>
-                    <Button theme='prev'>이전으로</Button> 
+                    <Button theme='prev' onClick={onPrevButton}>이전으로</Button> 
                     <Button theme='next'>제출하기</Button>
                 </div>
             </div>

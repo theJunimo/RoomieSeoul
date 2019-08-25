@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const roomType = ['원룸', '투룸', '쓰리룸+', '오피스텔', '아파트'];
 
-const RoomTypeField = () => {
+const RoomTypeField = ({onPrevButton, onNextButton}) => {
     const roomTypeList = roomType.map((item, index) => {
         return(
             <li key={index}
@@ -50,8 +50,8 @@ const RoomTypeField = () => {
                 </div>
             </div>
             <div className = {cx('buttonDiv')}>
-                <Button theme='prev'>이전</Button>
-                <Button theme='next'>다음</Button>
+                <Button theme='prev' onClick={onPrevButton}>이전</Button>
+                <Button theme='next' onClick={onNextButton}>다음</Button>
             </div>
         </div>
         );

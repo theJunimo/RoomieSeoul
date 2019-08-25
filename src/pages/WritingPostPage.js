@@ -1,11 +1,11 @@
 import React from 'react';
 import PageTemplate from 'components/common/PageTemplate';
-import WritingForm from 'components/form/WritingForm';
+import WritingFormContainer from 'containers/form/WritingFormContainer';
 
 const WritingPostPage = () => {
     return (
         <PageTemplate>
-            <WritingForm/>
+            <WritingFormContainer/>
         </PageTemplate>
     );
 };

@@ -5,7 +5,7 @@ import Button from 'components/common/Button';
 
 const cx = classNames.bind(styles);
 
-const AddressField = () => {
+const AddressField = ({onPrevButton, onNextButton}) => {
     return (
         <div className = {cx('addressFieldDiv')}>
             <div className = {cx('subTitleDiv')}>
@@ -21,8 +21,8 @@ const AddressField = () => {
                 </div>
             </div>
             <div className = {cx('buttonDiv')}>
-                <Button theme='prev'>이전으로</Button> 
-                <Button theme='next'>다음으로</Button>
+                <Button theme='prev' onClick={onPrevButton}>이전으로</Button> 
+                <Button theme='next' onClick={onNextButton}>다음으로</Button>
             </div>
         </div>
     )
