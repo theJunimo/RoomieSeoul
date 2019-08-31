@@ -51,15 +51,17 @@
             margin-top: 2rem;
 
             .detailInfo {
+                display: flex;
+                flex-direction: column;
                 width: 40rem;
                 margin: auto;
-                padding: 2rem 2rem 0 2rem;
+                padding: 2rem;
                 border-radius: 5px;
                 border: 1px solid $lightGray;
 
                 textarea {
                     width: 100%;
-                    min-height: 20rem;
+                    min-height: 15rem;
                     font-size: 1rem;
                     border : 0;
                     outline: none;
@@ -67,7 +69,8 @@
                 }
 
                 .limitChaCnt{
-                    margin: 1rem 0;
+                    margin-left: auto;
+                    margin-top: 1rem;
                 }
             }
         }

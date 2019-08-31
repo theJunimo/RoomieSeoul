@@ -1,25 +1,68 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styles from './TitleField.scss';
 import classNames from 'classnames/bind';
 import Button from 'components/common/Button';
 
 const cx = classNames.bind(styles);
 
-const TitleField = ({onNextButton, cntNumOfCha}) => {
-    return(
-    <div className = {cx('titleFieldDiv')}>
-        <div className = {cx('subTitleDiv')}>
-            <h2 className = {cx('subTitle')}>
-            지금 살고 있는 집에 대해서 간략한 소개를 해보세요!
-            </h2>
+class TitleField extends Component{
+
+    state = {
+        numOfCha : 0,//titleInput 글자 수
+    }
+    
+    //titleInput 50자 제한
+    cntNumOfCha = (e) => {
+        const s = e.target.value;
+        const cnt = s.length;
+        
+        if(cnt <= 50) { //50자 이하인 경우만 표시
+            this.setState({
+                numOfCha: cnt
+            })
+        } else { //50자 넘는 경우 input 내용 50자 이하로 잘라줌
+            this.setState({
+                numOfCha: 50
+            })
+            const sliced = s.slice(0, 50);
+            document.getElementsByName('titleInput')[0].value = sliced;
+        }
+    }
+
+    submitData = () => {
+        const s = document.getElementsByName('titleInput')[0].value;
+        const {onHandleButton} = this.props;
+        onHandleButton(s);
+    }
+
+    render() {
+        const {numOfCha} = this.state;
+        const {submitData, cntNumOfCha} = this;
+        const {savedData} = this.props;
+
+        return(
+        <div className = {cx('titleFieldDiv')}>
+            <div className = {cx('subTitleDiv')}>
+                <h2 className = {cx('subTitle')}>
+                지금 살고 있는 집에 대해서 간략한 소개를 해보세요!
+                </h2>
+            </div>
+            <div className = "flexColumn">
+                <input className = {cx('titleInput')} 
+                        type = 'text' 
+                        name = 'titleInput' 
+                        autoComplete = "off"
+                        onKeyUp = {cntNumOfCha} 
+                        defaultValue = {savedData}></input>
+                <div className = {cx('numOfChaLimit')}>
+                    <span> {numOfCha === 0? null: numOfCha+'/'}</span>
+                    <span>50자 제한</span>
+                </div>
+            </div>
+            <div className = {cx('buttonDiv')}><Button theme='next' onClick={submitData}>다음으로</Button></div>
         </div>
-        <div className = "flexColumn">
-            <input className = {cx('titleInput')}type='text' onKeyUp = {cntNumOfCha}></input>
-            <div className = {cx('numOfChaLimit')}>50자 제한</div>
-        </div>
-        <div className = {cx('buttonDiv')}><Button theme='next' onClick={onNextButton}>다음으로</Button></div>
-    </div>
-    );
+        );
+    }
 }
 
 export default TitleField;

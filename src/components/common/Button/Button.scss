@@ -181,13 +181,6 @@
 
         cursor: pointer;
 
-        &:hover {
-            border: 2px solid $basicBlue;
-            background-color: $basicBlue; 
-            color: white;
-            font-weight: bold;
-        }
-
         &.selected {
             border: 2px solid $basicBlue;
             background-color: $basicBlue; 

@@ -23,6 +23,8 @@
         border: 1px solid lightGray;
     }
     .modal{
-        background:white
+        overflow: hidden;
+        border-radius: 5px;
+        border: 1px solid lightGray;
     }
 }

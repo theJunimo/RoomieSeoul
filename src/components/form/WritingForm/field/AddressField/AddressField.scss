@@ -14,26 +14,37 @@
 
     .innerDiv {
         display: flex;
+        color: #7c7c7c;
 
         .flexColumn {
             width: 60%;
             margin:auto;
 
-            input[type='text'] {
+            .searchDiv {
+                width: 100%;
                 padding: 0.8rem 1rem;
                 border: 1px solid $lightGray;
+                
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+
+            .daumSearch {
+                position: absolute;
+                width: 24rem;
+                border: 1px solid $lightGray;
+                
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+
+            .detailAdd {
                 width: 100%;
-                font-size: 1rem;
+                margin-top: 1rem;
+                padding: 0.8rem 1rem;
+                border: 1px solid $lightGray;
+                font-size: 0.9rem;
                 outline-style: none;
-
-                &.searchAdd {
-                    width: 100%;
-                    cursor: pointer;
-                }
-
-                &.detailAdd {
-                    margin-top: 1rem;
-                }
             }
         }
     }

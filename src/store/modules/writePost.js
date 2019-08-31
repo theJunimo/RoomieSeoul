@@ -1,28 +1,24 @@
 import { createAction, handleActions } from 'redux-actions';
 
-import { Map, List } from 'immutable';
+import { Map } from 'immutable';
 
 //action types
-const TO_PREVSTEP = 'writePost/TO_PREVSTEP'; //이전 단계로가기
-const TO_NEXTSTEP = 'writePost/TO_NEXTSTEP'; //다음 단계로 가기
-const INSERT_TITLE = 'writePost/INSERT_TITLE'; // title 정보 변경
-const INSERT_ROOMTYPE = 'writePost/INSERT_ROOMTYPE'; // roomtype 정보 변경
-const INSERT_PAYMENT = 'writePost/INSERT_PAYMENT'; // payment 정보 변경
-const INSERT_ADDRESS = 'writePost/INSERT_ADDRESS'; // address 정보 변경
-const INSERT_OTHERS = 'writePost/INSERT_OTHERS'; // others 정보 변경
-const INSERT_INFO = 'writePost/INSERT_INFO'; // info 정보 변경
-const SUBMIT = 'writePost/SUBMIT'; // api 제출하기
+const SUBMIT_TITLE = 'writePost/SUBMIT_TITLE'; // title 정보 변경
+const SUBMIT_ROOMTYPE = 'writePost/SUBMIT_ROOMTYPE'; // roomtype 정보 변경
+const SUBMIT_PAYMENT = 'writePost/SUBMIT_PAYMENT'; // payment 정보 변경
+const SUBMIT_ADDRESS = 'writePost/SUBMIT_ADDRESS'; // address 정보 변경
+const SUBMIT_OTHERS = 'writePost/SUBMIT_OTHERS'; // others 정보 변경
+const SUBMIT_DETAIL = 'writePost/SUBMIT_DETAIL'; // info 정보 변경
+const SUBMIT_FINAL = 'writePost/SUBMIT_FINAL'; // api 제출하기
 
 //action creators
-export const toPrevStep = createAction(TO_PREVSTEP);
-export const toNextStep = createAction(TO_NEXTSTEP);
-export const insertTitle = createAction(INSERT_TITLE);
-export const insertRoomType = createAction(INSERT_ROOMTYPE);
-export const insertPayment = createAction(INSERT_PAYMENT);
-export const insertAddress = createAction(INSERT_ADDRESS);
-export const insertOthers = createAction(INSERT_OTHERS);
-export const insertInfo = createAction(INSERT_INFO);
-export const submit = createAction(SUBMIT);
+export const submitTitle = createAction(SUBMIT_TITLE);
+export const submitRoomType = createAction(SUBMIT_ROOMTYPE);
+export const submitPayment = createAction(SUBMIT_PAYMENT);
+export const submitAddress = createAction(SUBMIT_ADDRESS);
+export const submitOthers = createAction(SUBMIT_OTHERS);
+export const submitDetail= createAction(SUBMIT_DETAIL);
+export const submitFinal = createAction(SUBMIT_FINAL);
 
 //초기값
 const initialState = Map({
@@ -37,20 +33,19 @@ const initialState = Map({
             toiletCnt: 0
         }),
         payment: Map({
-            type: '',
             deposit: 0,
             monthlyFee: 0,
             mngFee : 0
         }),
         address: Map({
-            address: '',
-            detail: ''
+            fullAddr: '',
+            extraAddr: ''
         }),
         others: Map({
-            gender: '',
-            options: '',
+            gender: 'dummy',
+            options: [ ],
         }),
-        info: Map({
+        detail: Map({
             contactType: '',
             contact: '',
             info: '',
@@ -60,13 +55,61 @@ const initialState = Map({
 });
 
 export default handleActions({
-    [TO_PREVSTEP]: (state, action) => {
-        const currentStep = state.get('currentStep') - 1;
-        return state.set('currentStep', currentStep);
-    },
-    [TO_NEXTSTEP]: (state, action) => {
+    [SUBMIT_TITLE]: (state, action) => {
+        const {payload: data} = action;
         const currentStep = state.get('currentStep') + 1;
-        return state.set('currentStep', currentStep);
+        return state.set('currentStep', currentStep)
+                    .setIn(['postInfo', 'title'], data);
+    },
+    [SUBMIT_ROOMTYPE]: (state, action) => {
+        const {data, goTo} = action.payload;
+        let currentStep;
+        if (goTo === "prev") {
+            currentStep = state.get('currentStep') - 1;
+        } else {
+            currentStep = state.get('currentStep') + 1;
+        }
+        return state.set('currentStep', currentStep)
+        .setIn(['postInfo', 'room'], data);
+    },
+    [SUBMIT_ADDRESS]: (state, action) => {
+        const {data, goTo} = action.payload;
+        let currentStep;
+        if (goTo === "prev") {
+            currentStep = state.get('currentStep') - 1;
+        } else {
+            currentStep = state.get('currentStep') + 1;
+        }
+        return state.set('currentStep', currentStep)
+        .setIn(['postInfo', 'address'], data);
+    },
+    [SUBMIT_PAYMENT]: (state, action) => {
+        const {data, goTo} = action.payload;
+        let currentStep;
+        if (goTo === "prev") {
+            currentStep = state.get('currentStep') - 1;
+        } else {
+            currentStep = state.get('currentStep') + 1;
+        }
+        return state.set('currentStep', currentStep)
+                    .setIn(['postInfo', 'payment'], data);
+    },
+    [SUBMIT_OTHERS]: (state, action) => {
+        const {data, goTo} = action.payload;
+        let currentStep;
+        if (goTo === "prev") {
+            currentStep = state.get('currentStep') - 1;
+        } else {
+            currentStep = state.get('currentStep') + 1;
+        }
+        return state.set('currentStep', currentStep)
+                    .setIn(['postInfo', 'others'], data);
+    },
+    [SUBMIT_DETAIL]: (state, action) => {
+        const {data} = action.payload;
+        const currentStep = state.get('currentStep') - 1;
+        return state.set('currentStep', currentStep)
+                    .setIn(['postInfo', 'detail'], data);
     }
 }, initialState)
 

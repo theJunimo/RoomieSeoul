@@ -49,41 +49,14 @@
 
         }
 
-        .message {
-            display: flex;
-            margin-right: auto;
-
-            color: $fontGray;
-            font-size: 0.8rem;
-        }
-
         .mngFeeDiv {
             display:flex;
             flex-direction: column;
+            margin-top: 10px;
             
-            .mngFeeDiv-inner{
-                display: flex;
-                width: 100%;
-
-                .mngFeeTitle {
-                    width: 20%;
-                    font-size: 1rem;
-                }
-                
-                .checkboxDiv {
-                    display:flex;
-                    margin-right: 2rem;
-                    vertical-align: middle;  
-                    .mngFee-checkbox{
-                        width: 1.3rem;
-                        height: 1.3rem;
-                    }
-                }
-            }
-
             .flexRow-margin{
                 display: flex;
-                margin-top: 1rem;
+                margin:auto;
 
                 input[type='text'] {
                     padding: 0.8rem 1rem;
@@ -92,6 +65,10 @@
             
                     font-size: 1rem;
                     outline-style: none;
+
+                    &:disabled {
+                        background-color: $lightGray;
+                    }
                 }
 
                 .won {
@@ -105,6 +82,20 @@
                     font-weight: bold;
                 }
             }
+        }
+    }
+    .message {
+        display: flex;
+        margin: auto;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        .icon{
+            margin-top: 2px;
+        }
+
+        span {
+            margin-left: 10px;
+            color: gray;
         }
     }
     .buttonDiv {

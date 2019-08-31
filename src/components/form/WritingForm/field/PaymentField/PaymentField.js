@@ -2,41 +2,38 @@ import React, { Component } from 'react';
 import styles from './PaymentField.scss';
 import classNames from 'classnames/bind';
 import Button from 'components/common/Button';
+import {Notice} from 'components/common/Icon';
 
 const cx = classNames.bind(styles);
 
 class PaymentField extends Component {
 
     state = {
-        mngFeeCheckBox: 'false',
+
     }
 
+    submitData = (goTo) => {
+        const {onHandleButton} = this.props;
+        const deposit = document.getElementById('deposit').value;
+        const monthlyFee = document.getElementById('monthlyFee').value;
+        const mngFee = document.getElementById('mngFee').value;
 
-    onCheckBox = (e) => {
-        if(e.target.value === 'false') {
-            document.getElementById('yes').checked = false;
-        } else {
-            document.getElementById('no').checked = false;
+        const data = {
+            data:{
+                deposit,
+                monthlyFee,
+                mngFee
+            },
+            goTo
         }
 
-        this.setState({
-            mngFee: e.target.value
-        })
+        onHandleButton(data);
     }
 
     render(){
-        const {onPrevButton, onNextButton} = this.props;
-
-        const MngFeeField = () => (
-            <div className= {cx('flexRow-margin')}>
-                <div>
-                    <input type='text' placeholder='관리비' />
-                </div>
-                <div className = {cx('won')}>
-                    만원
-                </div>
-            </div>
-        );
+        const {mngFeeCheckBox} = this.state;
+        const {submitData} = this;
+        const {deposit, monthlyFee, mngFee} = this.props.savedData;
 
         return(
             <div className = {cx('paymentFieldDiv')}>
@@ -48,36 +45,46 @@ class PaymentField extends Component {
                 <div className = {cx('innerDiv')}>
                 <div className = {cx('flexRow')}>
                     <div>
-                        <input type='text' placeholder='보증금'/>
+                        <input type='text' 
+                                id='deposit' 
+                                defaultValue={deposit === 0? null : deposit}
+                                placeholder='보증금'/>
                     </div>
                     <div className = {cx('slash')}>/</div>
                     <div>
-                        <input type='text' placeholder='월세' />
+                        <input type='text' 
+                                id='monthlyFee' 
+                                defaultValue={monthlyFee === 0? null : monthlyFee}
+                                placeholder='월세' />
                     </div>
                     <div className = {cx('won')}>
                         만원
                     </div>
                 </div>
-                <div className = {cx('message')}>* 보증금이 없다면 빈칸으로 남겨주세요.</div>
                 <div className = {cx('dividerLine')}></div>
                 <div className = {cx('mngFeeDiv')}>
-                    <div className = {cx('mngFeeDiv-inner')}>
-                        <div className = {cx('mngFeeTitle')}>관리비 여부</div>
-                        <label htmlFor='yes' className = {cx('checkboxDiv')}>
-                            <input className = {cx('mngFee-checkbox')} type='checkbox' id='yes' value='true' onClick={this.onCheckBox}/>
-                            <span>네</span>
-                        </label>
-                        <label htmlFor='no' className = {cx('checkboxDiv')}>
-                            <input className = {cx('mngFee-checkbox')} type='checkbox' id='no' value='false' onClick={this.onCheckBox}/>
-                            <span>아니오</span>
-                        </label>
+                    <div className= {cx('flexRow-margin')}>
+                        <div>
+                            <input type = 'text' 
+                                    id = 'mngFee'
+                                    defaultValue = {mngFee === 0? null : mngFee}
+                                    placeholder = '관리비'
+                                    className = {cx('.mngFee')}
+                                    disabled = {mngFeeCheckBox === 'false' && mngFee === 0 ? true : false}
+                                     />
+                        </div>
+                        <div className = {cx('won')}>
+                            만원
+                        </div>
                     </div>
-                    {(this.state.mngFee === 'true')? MngFeeField(): null}
                 </div>
+                <div className = {cx('message')}>
+                    <div className = {cx('icon')}><Notice/></div>
+                    <span>보증금이나 관리비가 없다면 빈칸으로 남겨주세요.</span></div>
                 </div>
                 <div className = {cx('buttonDiv')}>
-                    <Button theme='prev' onClick={onPrevButton}>이전</Button>
-                    <Button theme='next' onClick={onNextButton}>다음</Button>
+                    <Button theme='prev' onClick = {()=>submitData("prev")}>이전</Button>
+                    <Button theme='next' onClick = {()=>submitData("next")}>다음</Button>
                 </div>
             </div>
         );

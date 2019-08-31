@@ -11,7 +11,12 @@ const title1 = '새로운 roomie를 만나볼 준비, 되셨나요?';
 const title2 = '이제 거의 다 됐습니다!'
 const title3 = '진짜 마지막입니다!'
 
-const WritingForm = ({currentStep, onPrevButton, onNextButton}) => {
+const WritingForm = ({currentStep, 
+                        savedData,
+                        submitTitle, submitRoomType, submitPayment, submitAddress, submitOthers, submitDetail, onPrevButton, onNextButton}) => {
+    
+    const {title, room, payment, address, others, detail} = savedData.toJS();
+
     const getTitle = () => {
         if(currentStep === 1 || currentStep === 2 || currentStep === 3) {
             return title1;
@@ -25,27 +30,33 @@ const WritingForm = ({currentStep, onPrevButton, onNextButton}) => {
     const getField = () => {
         switch(currentStep) {
             case 1: {
-                return <TitleField onNextButton={onNextButton}/>
+                return <TitleField savedData = {title} onHandleButton = {submitTitle}/>
             }
             case 2: {
-                return <RoomTypeField onPrevButton={onPrevButton} onNextButton={onNextButton}/>
+                return <RoomTypeField savedData = {room}
+                        onHandleButton = {submitRoomType}/>
             }
             case 3: {
-                return <PaymentField onPrevButton={onPrevButton} onNextButton={onNextButton}/>
+                return <PaymentField savedData = {payment}
+                        onHandleButton ={submitPayment}/>
             }
             case 4: {
-                return <AddressField onPrevButton={onPrevButton} onNextButton={onNextButton}/>
+                return <AddressField savedData={address}
+                        onHandleButton = {submitAddress}/>
             }
             case 5: {
-                return <OthersField onPrevButton={onPrevButton} onNextButton={onNextButton}/>
+                return <OthersField savedData = {others}
+                        onHandleButton = {submitOthers}/>
             }
             case 6: {
-                return <InfoField onPrevButton={onPrevButton}/>
+                return <InfoField savedData={detail}
+                        handleButton = {submitDetail}/>
             }
             default: return null;
         }
     }
     return (
+
         <div className = {cx('container')}>
             <h1>{getTitle()}</h1>
             <ProgressBar currentStep = {currentStep}/>
@@ -53,6 +64,7 @@ const WritingForm = ({currentStep, onPrevButton, onNextButton}) => {
             {getField()}
             </div>   
         </div>
+
     );
 
 };

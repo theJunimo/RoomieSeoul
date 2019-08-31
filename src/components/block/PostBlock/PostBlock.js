@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PostBlock.scss';
 import className from 'classnames/bind';
-import Icon from 'components/common/Icon';
+import {Heart}from 'components/common/Icon';
 const cx = className.bind(styles);
 
 
@@ -17,7 +17,7 @@ const PostBlock = ({img, info, onClick}) => (
                     <div className={cx('userName')}>Junimo</div>
                 </div>
                 <div className={cx('likeIcon')} onClick={onClick}>
-                    <Icon type="filledHeart" />
+                    <Heart type="filledHeart" />
                 </div>
             </div>
             <div className={cx('bottom')}>
