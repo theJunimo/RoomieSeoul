@@ -2,6 +2,7 @@ import React, {Component}from 'react';
 import styles from './AddressField.scss';
 import classNames from 'classnames/bind';
 import Button from 'components/common/Button';
+import AlertModal from 'components/modal/AlertModal'
 
 //다음 우편번호 검색 서비스
 import DaumPostCode from 'react-daum-postcode';
@@ -14,8 +15,17 @@ class AddressField extends Component {
         addSearchVisible : false,
         fullAddr: this.props.savedData.fullAddr,
         extraAddr: this.props.savedData.extraAddr,
+        validate: true,
+        sido: this.props.savedData.sido, //주소 시도 
+        alertMsg: '주소 검색으로 주소를 입력해주세요!'
     }
-    
+
+    handleValidate = () => {
+        this.setState({
+            validate: true
+        })
+    }
+
     handleShowAddSearch = () => {
         this.setState({
             ...this.state,
@@ -38,8 +48,10 @@ class AddressField extends Component {
 
         this.setState({
             addSearchVisible : false,
+            sido: data.sido,
             fullAddr
         })
+
     }
 
     handleExtraAddr = (e) => {
@@ -50,24 +62,45 @@ class AddressField extends Component {
     }
 
     submitData = (goTo) => {
-        const {fullAddr, extraAddr} = this.state;
+        const {fullAddr, extraAddr, sido} = this.state;
         const {onHandleButton} = this.props;
-        const data = {
-            data: {
-                fullAddr: fullAddr,
-                extraAddr: extraAddr
-            },
-            goTo
+
+        if(fullAddr){
+            if(sido !== '서울'){
+                this.setState({
+                    fullAddr: '',
+                    validate: false,
+                    alertMsg: '현재 루미서울은 서울지역만 지원하고 있습니다.',
+                })
+            } else {
+                const data = {
+                    data: {
+                        fullAddr,
+                        extraAddr,
+                        sido
+                    },
+                    goTo
+                }
+                return onHandleButton(data);
+            }
+
+        } else {
+            this.setState({
+                validate: false,
+                alertMsg: '주소 검색을 통해 주소를 입력해주세요!'
+            })
         }
-        onHandleButton(data);
     }
 
     render(){
-        const{addSearchVisible, fullAddr, extraAddr} = this.state;
-        const{submitData, handleShowAddSearch, handleExtraAddr, handleAddress} = this;
+        const{addSearchVisible, fullAddr, extraAddr, validate, alertMsg} = this.state;
+        const{submitData, handleShowAddSearch, handleExtraAddr, handleAddress, handleValidate} = this;
 
     return (
         <div className = {cx('addressFieldDiv')}>
+            <div className = {cx('spotForModal')}>
+                {(!validate)? <AlertModal onAnimationEnd={handleValidate}>{alertMsg}</AlertModal> : null}
+            </div> 
             <div className = {cx('subTitleDiv')}>
                 <h2 className = {cx('subTitle')}>
                     주소를 입력해주세요.

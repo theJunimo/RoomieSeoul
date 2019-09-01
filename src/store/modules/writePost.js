@@ -39,10 +39,11 @@ const initialState = Map({
         }),
         address: Map({
             fullAddr: '',
-            extraAddr: ''
+            extraAddr: '',
+            sido: '',
         }),
         others: Map({
-            gender: 'dummy',
+            gender: '',
             options: [ ],
         }),
         detail: Map({

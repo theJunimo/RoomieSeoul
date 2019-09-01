@@ -3,6 +3,11 @@
 .infoFieldDiv {
     color: $fontGray;
 
+    .spotForModal{
+        display: flex;
+        min-height: 2.25rem;
+    }
+    
     .innerDiv {
         display: flex;
         flex-direction: column;

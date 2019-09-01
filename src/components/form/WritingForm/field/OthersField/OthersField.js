@@ -3,6 +3,7 @@ import styles from './OthersField.scss';
 import classNames from 'classnames/bind';
 import Button from 'components/common/Button';
 import {Notice} from 'components/common/Icon';
+import AlertModal from 'components/modal/AlertModal'
 
 const cx = classNames.bind(styles);
 
@@ -15,6 +16,13 @@ class OthersField extends Component {
     state = {
         gender: this.props.savedData.gender,
         options: this.props.savedData.options,
+        validate: true
+    }
+
+    handleValidate = () => {
+        this.setState({
+            validate: true
+        })
     }
 
     selectGender = (item) => {
@@ -26,8 +34,6 @@ class OthersField extends Component {
 
     selectOption = (item) => {
         const {options} = this.state;
-        console.log(options.length);
-        console.log(Array.isArray(options));
 
         if(options.length > 0){
             if(options.includes(item)){
@@ -54,21 +60,28 @@ class OthersField extends Component {
     submitData = (goTo) => {
         const{onHandleButton} = this.props;
         const{gender, options} = this.state;
-        
-        const data = {
-            data: {
-                gender,
-                options
-            },
-            goTo
-        }
 
-        onHandleButton(data);
+        //성별 비었으면 못넘어감
+        if(gender) {
+            const data = {
+                data: {
+                    gender,
+                    options
+                },
+                goTo
+            }
+
+            onHandleButton(data);
+        } else {
+            this.setState({
+                validate: false
+            })
+        }
     }
 
     render(){
-        const {gender, options} = this.state;
-        const {selectGender, selectOption, submitData} = this;
+        const {gender, options, validate} = this.state;
+        const {selectGender, selectOption, submitData, handleValidate} = this;
 
         const genderList = genderArr.map((item, index) => {
             return(gender === item)?
@@ -100,6 +113,9 @@ class OthersField extends Component {
 
         return (
             <div className = {cx('othersFieldDiv')}>
+                <div className = {cx('spotForModal')}>
+                    {(!validate)? <AlertModal onAnimationEnd={handleValidate}>성별을 선택해주세요!</AlertModal> : null}
+                </div> 
                 <div className = {cx('subTitleDiv')}>
                     <h2>
                         세부사항을 입력해주세요.

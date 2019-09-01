@@ -1,8 +1,39 @@
 @import 'styles/utils';
 
-.modalOuter {
+
+.alertDiv {
+    display: inline-block;
+    margin: auto;
+
+    font-size: 0.8rem;
+    color: #fa5252;
     background-color: white;
-    border: 1px solid $lightGray;
-    padding: 1rem 2rem;
-    
+    box-shadow: -1px 6px 13px -5px rgba(138,135,138,1);
+
+
+    animation: opacityOn 4s normal forwards;
+
+
+    .alertDiv-inner{
+        border-radius: 3px;
+        border: 0.5px solid #fa5252;
+        padding: 0.5rem 1rem;
+    }
+
+    @keyframes opacityOn {
+        0% {
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
 }
+
+

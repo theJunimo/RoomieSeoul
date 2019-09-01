@@ -5,6 +5,11 @@
     flex-direction: column;
     color: $fontGray;
 
+    .spotForModal{
+        display: flex;
+        min-height: 2.25rem;
+    }
+    
     .subTitleDiv{
         margin-bottom: 1rem;
     }

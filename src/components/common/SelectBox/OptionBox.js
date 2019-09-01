@@ -12,7 +12,7 @@ const OptionBox = ({items, theme, onClick, visible, selected}) => {
         } else {
             return <div key={idx}
                         className={cx('item')} 
-                        onClick={onClick} >{item}</div>
+                        onClick={()=> onClick(item)} >{item}</div>
         }
     })
     

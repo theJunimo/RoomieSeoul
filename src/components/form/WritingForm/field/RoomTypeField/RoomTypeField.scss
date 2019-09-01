@@ -5,6 +5,11 @@
     flex-direction: column;
     margin: auto;
 
+    .spotForModal{
+        display: flex;
+        min-height: 2.25rem;
+    }
+    
     .subTitleDiv{
         margin-bottom: 1rem;
         text-align: center;
