@@ -9,12 +9,13 @@ import DaumPostCode from 'react-daum-postcode';
 const cx = classNames.bind(styles);
 
 class AddressField extends Component {
+
     state = {
         addSearchVisible : false,
         fullAddr: this.props.savedData.fullAddr,
         extraAddr: this.props.savedData.extraAddr,
     }
-
+    
     handleShowAddSearch = () => {
         this.setState({
             ...this.state,
@@ -63,7 +64,7 @@ class AddressField extends Component {
 
     render(){
         const{addSearchVisible, fullAddr, extraAddr} = this.state;
-        const{submitData, handleShowAddSearch, handleExtraAddr} = this;
+        const{submitData, handleShowAddSearch, handleExtraAddr, handleAddress} = this;
 
     return (
         <div className = {cx('addressFieldDiv')}>
@@ -78,12 +79,11 @@ class AddressField extends Component {
                         {(fullAddr === '')? (<span>주소 검색</span>) : (<span>{fullAddr}</span>)}
                     </div>
                     {addSearchVisible? (
-                    <div className = {cx('daumSearch')} onClick = {handleShowAddSearch}>
-                        <DaumPostCode
-                        onComplete = {this.handleAddress}
-                        autoClose = {true}
-                        />
-                    </div>
+                        <div className = {cx('daumSearch')}>
+                            <DaumPostCode
+                            onComplete = {handleAddress}
+                            />
+                        </div>
                     ) : null}
 
                     <div>
