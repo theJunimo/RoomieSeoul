@@ -20,6 +20,10 @@ class AddressField extends Component {
         alertMsg: '주소 검색으로 주소를 입력해주세요!'
     }
 
+    componentDidMount = () => {
+        window.scrollTo(0,130);
+    }
+
     handleValidate = () => {
         this.setState({
             validate: true

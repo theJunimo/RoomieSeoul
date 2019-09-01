@@ -21,6 +21,16 @@ class InfoField extends Component {
         alertMsg: '연락처와 사진은 필수입니다.'
     }
 
+    componentDidMount = () => {
+        window.scrollTo(0,130);
+    }
+
+    componentDidUpdate(prevState) {
+        if (prevState!== this.state) {
+            window.scrollTo(0,130);
+        }
+      }
+
     handleValidate = () => {
         this.setState({
             validate: true

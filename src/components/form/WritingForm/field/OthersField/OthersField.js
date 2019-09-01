@@ -19,6 +19,10 @@ class OthersField extends Component {
         validate: true
     }
 
+    componentDidMount = () => {
+        window.scrollTo(0,130);
+    }
+    
     handleValidate = () => {
         this.setState({
             validate: true

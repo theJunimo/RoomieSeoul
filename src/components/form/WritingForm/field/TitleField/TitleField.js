@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import styles from './TitleField.scss';
 import classNames from 'classnames/bind';
 import Button from 'components/common/Button';
@@ -11,7 +11,10 @@ class TitleField extends Component{
         numOfCha : 0,//titleInput 글자 수
         validate: true
     }
-
+    
+    componentDidMount = () => {
+        window.scrollTo(0,130);
+    }
     //titleInput 50자 제한
     handleNumOfCha = (e) => {
         const s = e.target.value;
@@ -55,7 +58,7 @@ class TitleField extends Component{
         const {savedData} = this.props;
 
         return(
-        <Fragment>
+        <React.Fragment>
         <div className = {cx('titleFieldDiv')}>
             <div className = {cx('spotForModal')}>
                 {(!validate)? <AlertModal onAnimationEnd={handleValidate}>제목을 입력해주세요!</AlertModal> : null}
@@ -80,7 +83,7 @@ class TitleField extends Component{
             </div>
             <div className = {cx('buttonDiv')}><Button theme='next' onClick={submitData}>다음으로</Button></div>
         </div>
-        </Fragment>
+        </React.Fragment>
         );
     }
 }

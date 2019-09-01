@@ -11,6 +11,10 @@ class PaymentField extends Component {
 
     state = {
         validate: true //빈 값 있는지 확인
+    }   
+
+    componentDidMount = () => {
+        window.scrollTo(0,130);
     }
 
     checkIfNum = (e) => {
