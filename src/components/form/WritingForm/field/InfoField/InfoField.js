@@ -26,7 +26,7 @@ class InfoField extends Component {
     }
 
     componentDidUpdate(prevState) {
-        if (prevState!== this.state) {
+        if (prevState.validate!== this.state.validate) {
             window.scrollTo(0,130);
         }
       }

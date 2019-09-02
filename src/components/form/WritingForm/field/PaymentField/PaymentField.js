@@ -76,6 +76,7 @@ class PaymentField extends Component {
                                 id = 'deposit' 
                                 defaultValue = {deposit === 0? null : deposit}
                                 placeholder = '보증금'
+                                autoComplete = 'off'
                                 onChange = {checkIfNum}/>
                     </div>
                     <div className = {cx('slash')}>/</div>
@@ -84,7 +85,8 @@ class PaymentField extends Component {
                                 id = 'monthlyFee'
                                 autoFocus
                                 defaultValue = {monthlyFee === 0? null : monthlyFee}
-                                placeholder = '월세' 
+                                placeholder = '월세'
+                                autoComplete = 'off'
                                 onChange = {checkIfNum}/>
                     </div>
                     <div className = {cx('won')}>
@@ -95,11 +97,12 @@ class PaymentField extends Component {
                 <div className = {cx('mngFeeDiv')}>
                     <div className= {cx('flexRow-margin')}>
                         <div>
-                            <input type = 'text' 
+                            <input type = 'text'
+                                    className = {cx('mngFee')}
                                     id = 'mngFee'
                                     defaultValue = {mngFee === 0? null : mngFee}
                                     placeholder = '관리비'
-                                    className = {cx('.mngFee')}
+                                    autoComplete = 'off'
                                     disabled = {mngFeeCheckBox === 'false' && mngFee === 0 ? true : false}
                                     onChange = {checkIfNum}
                                      />

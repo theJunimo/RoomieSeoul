@@ -1,0 +1,10 @@
+@import 'styles/utils';
+
+.daumSearch {
+    position: absolute;
+    width: 24rem;
+    border: 1px solid $lightGray;
+    
+    font-size: 0.9rem;
+    cursor: pointer;
+}

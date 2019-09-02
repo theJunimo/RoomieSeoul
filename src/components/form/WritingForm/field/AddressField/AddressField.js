@@ -3,8 +3,8 @@ import styles from './AddressField.scss';
 import classNames from 'classnames/bind';
 import Button from 'components/common/Button';
 import AlertModal from 'components/modal/AlertModal'
-
-//다음 우편번호 검색 서비스
+import AddSearch from './AddSearch'
+//다음 우편번호 검색 서비스 component
 import DaumPostCode from 'react-daum-postcode';
 
 const cx = classNames.bind(styles);
@@ -12,28 +12,33 @@ const cx = classNames.bind(styles);
 class AddressField extends Component {
 
     state = {
-        addSearchVisible : false,
+        addrSearchVisible : false,
         fullAddr: this.props.savedData.fullAddr,
         extraAddr: this.props.savedData.extraAddr,
         validate: true,
         sido: this.props.savedData.sido, //주소 시도 
-        alertMsg: '주소 검색으로 주소를 입력해주세요!'
+        alertMsg: '주소 검색으로 주소를 입력해주세요!',
     }
 
     componentDidMount = () => {
         window.scrollTo(0,130);
     }
 
-    handleValidate = () => {
+    closeAddrSearch = () => {
         this.setState({
-            validate: true
+            addrSearchVisible: false
         })
     }
 
-    handleShowAddSearch = () => {
+    showAddrSearch = () => {
         this.setState({
-            ...this.state,
-            addSearchVisible: !this.state.addSearchVisible
+            addrSearchVisible: true
+        })
+    }
+
+    handleValidate = () => {
+        this.setState({
+            validate: true
         })
     }
 
@@ -51,7 +56,7 @@ class AddressField extends Component {
 
 
         this.setState({
-            addSearchVisible : false,
+            addrSearchVisible : false,
             sido: data.sido,
             fullAddr
         })
@@ -97,8 +102,8 @@ class AddressField extends Component {
     }
 
     render(){
-        const{addSearchVisible, fullAddr, extraAddr, validate, alertMsg} = this.state;
-        const{submitData, handleShowAddSearch, handleExtraAddr, handleAddress, handleValidate} = this;
+        const{addrSearchVisible, fullAddr, extraAddr, validate, alertMsg} = this.state;
+        const{submitData, showAddrSearch, closeAddrSearch, handleExtraAddr, handleAddress, handleValidate} = this;
 
     return (
         <div className = {cx('addressFieldDiv')}>
@@ -112,15 +117,12 @@ class AddressField extends Component {
             </div>
             <div className = {cx('innerDiv')}>
                 <div className = {cx('flexColumn')}>
-                    <div className = {cx('searchDiv')} onClick = {handleShowAddSearch}>
+                    <div className = {cx('searchDiv')} onClick = {showAddrSearch}>
                         {(fullAddr === '')? (<span>주소 검색</span>) : (<span>{fullAddr}</span>)}
                     </div>
-                    {addSearchVisible? (
-                        <div className = {cx('daumSearch')}>
-                            <DaumPostCode
-                            onComplete = {handleAddress}
-                            />
-                        </div>
+                    {addrSearchVisible? (
+                        <AddSearch onComplete = {handleAddress}
+                                    closeAddrSearch = {closeAddrSearch}/>
                     ) : null}
 
                     <div>
