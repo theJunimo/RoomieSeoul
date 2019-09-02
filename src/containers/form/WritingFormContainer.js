@@ -6,6 +6,10 @@ import WritingForm from 'components/form/WritingForm';
 
 
 class WritingFormContainer extends Component {
+    componentDidMount = () => {
+        const{WritePostActions} = this.props;
+        WritePostActions.initialize();
+    }
     
     submitTitle = (data) => {
         const{WritePostActions} = this.props;

@@ -5,7 +5,6 @@ import Button from 'components/common/Button';
 import AlertModal from 'components/modal/AlertModal'
 import AddSearch from './AddSearch'
 //다음 우편번호 검색 서비스 component
-import DaumPostCode from 'react-daum-postcode';
 
 const cx = classNames.bind(styles);
 

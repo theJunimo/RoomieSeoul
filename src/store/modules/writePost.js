@@ -3,6 +3,7 @@ import { createAction, handleActions } from 'redux-actions';
 import { Map } from 'immutable';
 
 //action types
+const INITIALIZE = 'writepost/INITIALIZE' //상태값 초기화
 const SUBMIT_TITLE = 'writePost/SUBMIT_TITLE'; // title 정보 변경
 const SUBMIT_ROOMTYPE = 'writePost/SUBMIT_ROOMTYPE'; // roomtype 정보 변경
 const SUBMIT_PAYMENT = 'writePost/SUBMIT_PAYMENT'; // payment 정보 변경
@@ -12,6 +13,7 @@ const SUBMIT_DETAIL = 'writePost/SUBMIT_DETAIL'; // info 정보 변경
 const SUBMIT_FINAL = 'writePost/SUBMIT_FINAL'; // api 제출하기
 
 //action creators
+export const initialize = createAction(INITIALIZE);
 export const submitTitle = createAction(SUBMIT_TITLE);
 export const submitRoomType = createAction(SUBMIT_ROOMTYPE);
 export const submitPayment = createAction(SUBMIT_PAYMENT);
@@ -56,6 +58,7 @@ const initialState = Map({
 });
 
 export default handleActions({
+    [INITIALIZE]: (state, action) => initialState,
     [SUBMIT_TITLE]: (state, action) => {
         const {payload: data} = action;
         const currentStep = state.get('currentStep') + 1;
