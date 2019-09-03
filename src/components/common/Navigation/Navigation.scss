@@ -2,6 +2,7 @@
 
 .nav {
     color: $fontGray;
+    cursor: pointer;
 
     &.main {
         &:active, &:hover {
@@ -14,8 +15,20 @@
         font-size: 0.9rem;
         margin-left: 5px;
 
-        &:hover {
+        &:active, &:hover {
             text-decoration: underline;
+        }
+    }
+
+    &.selectBox {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            color: #868e96;
         }
     }
 }

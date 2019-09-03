@@ -10,16 +10,17 @@
     width: 1400px;
     margin: 0 auto;
 
-    padding: 4rem 4rem;
+    padding: 4rem 5rem;
 
     @include media("<wide") {
-        width: 768px;
+        width: 100%;;
     }
+    
     @include media("<large") {
-        width: 512px;
-    }
-    @include media("<medium") {
         width: 100%;
     }
 
+    @include media("<medium") {
+        width: 100%;
+    }
 }

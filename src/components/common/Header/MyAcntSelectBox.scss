@@ -1,0 +1,25 @@
+@import 'styles/utils';
+
+.listBox-outer{
+    width: 1400px;
+    position: relative;
+    padding: 0 5rem;
+    margin: 0 auto;
+
+
+    .listBox {
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 5rem;
+        color: $fontGray;
+        width: 7.3rem;
+        border: 1px solid #e9ecef;
+        border-top: 0;
+        background-color: white;
+
+    }
+}
+

@@ -12,7 +12,7 @@ const App = () => {
                 <Route exact path="/post/:postid" component={PostPage} />
                 <Route exact path="/write" component={WritingPostPage} />
                 <Route path="/likedpost/:uerId" component={LikedPostListPage} />
-                <Route path="/mypage/:userId" component={MyPage} />
+                <Route path="/mypage/mypost/:userId" component={MyPage} />
                 <Route component={NotFoundPage}/>  
             </Switch>
         </div>

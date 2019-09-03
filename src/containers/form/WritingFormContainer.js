@@ -42,8 +42,8 @@ class WritingFormContainer extends Component {
     }
 
     render() {
-        const {currentStep, postInfo} = this.props;
-        const {submitTitle, submitRoomType, submitPayment, submitAddress, submitOthers, submitDetail} = this;
+        const { currentStep, postInfo } = this.props;
+        const { submitTitle, submitRoomType, submitPayment, submitAddress, submitOthers, submitDetail } = this;
 
         return(
             <WritingForm currentStep = {currentStep} 
