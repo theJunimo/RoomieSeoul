@@ -1,1 +1,1 @@
-export {default} from './LikedPostList';
+export {default} from './LikedPostListWrapper';

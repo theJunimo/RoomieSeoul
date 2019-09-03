@@ -6,11 +6,11 @@ const cx = className.bind(styles);
 
 class ModalWrapper extends Component {
     render() {
-        const { children, type } = this.props;
+        const { children, visible } = this.props;
         return(
-            <div>
+            <div style = {(visible? {display: 'block'} : {display: 'none'})}>
                 <div className={cx('gray-background')}>
-                    <div className={cx('modal-wrapper', type)}>
+                    <div className={cx('modal-wrapper')}>
                         <div className={cx('modal')}>
                             {children}
                         </div>

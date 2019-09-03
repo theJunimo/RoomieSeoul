@@ -6,8 +6,8 @@ const Icon = ({type = 'UnfilledHeart'}) => {
                 aria-label="좋아요" 
                 width="35" 
                 height="35" 
-                stroke="#343a40" 
-                fill="#e64980" 
+                stroke="#495057" 
+                fill="#ff8787" 
                 strokeWidth = "0.7px" 
                 viewBox="0 0 24 24" 
                 preserveAspectRatio="xMidYMid meet">

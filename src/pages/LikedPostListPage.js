@@ -1,15 +1,12 @@
 import React from 'react';
 import PageTemplate from 'components/common/PageTemplate';
-import LikedPostFilter from 'components/filter/LikedPostFilter';
-import LikedPostList from 'components/list/LikedPostList';
-import CancelLikeModal from 'components/modal/CancelLikeModal';
+import LikedPostListContainer from 'containers/list/LikedPostListContainer';
+
 
 const LikedPostPage = () => {
     return (
         <PageTemplate>
-            {/*<CancelLikeModal />*/}
-            <LikedPostFilter />
-            <LikedPostList></LikedPostList>
+            <LikedPostListContainer/>
         </PageTemplate>
     );
 };

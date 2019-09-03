@@ -51,18 +51,12 @@
             background-color: $basicYellow;
             border: 1px solid transparent;
             border-radius: 4px;
-            box-shadow: 0 3px #b9bdba;
 
 
             &:hover{
                 background-color: $darkerYellow;
             }
 
-            &:active{
-                background-color: $darkerYellow;
-                box-shadow: 0 1px #b9bdba;
-                transform: translateY(4px);
-            }
         }
 
         &.no {
@@ -77,17 +71,11 @@
             background-color: $lightGray;
             border: 1px solid transparent;
             border-radius: 4px;
-            box-shadow: 0 3px #b9bdba;
-
+            
             &:hover{
                 background-color: #d1d1d1;
             }
 
-            &:active{
-                background-color: #d1d1d1;
-                box-shadow: 0 1px #b9bdba;
-                transform: translateY(4px);
-            }
         }
 
         //다음으로 버튼

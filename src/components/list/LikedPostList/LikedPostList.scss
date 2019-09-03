@@ -1,8 +1,11 @@
+@import 'styles/utils';
+
+.notice {
+    margin-bottom: 1rem;
+}
 
 .listWrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-
-    margin-top: 2rem;
 }
