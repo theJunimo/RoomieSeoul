@@ -14,7 +14,7 @@ export default function MyAcntSelectBox() {
             <Navigation key = {idx}
                         theme = 'selectBox'
                         className = {cx('item')} 
-                        to = {idx === 0? '/logout' : (idx === 1)? '/mypage/post' : '/mypage/profile'}>
+                        to = {idx === 0? '/logout' : (idx === 1)? '/mypage/mypost' : '/mypage/myprofile'}>
             {item}
             </Navigation>
             ))

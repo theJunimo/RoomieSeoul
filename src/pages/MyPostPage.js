@@ -1,7 +1,7 @@
 import React from 'react';
 import PageTemplate from 'components/common/PageTemplate';
 
-const MyPage = () => {
+const MyPostPage = () => {
     return(
         <PageTemplate>
             MyPage
@@ -9,4 +9,4 @@ const MyPage = () => {
     );
 };
 
-export default MyPage;
+export default MyPostPage;
