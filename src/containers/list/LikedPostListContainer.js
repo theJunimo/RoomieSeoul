@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router-dom';
 import * as mngLikedPostActions from 'store/modules/mngLikedPost';
 import LikedPostListWrapper from 'components/list/LikedPostList';
+
 
 
 class LikedPostListComponent extends Component {
@@ -23,9 +25,7 @@ class LikedPostListComponent extends Component {
     }
 
     goToPostPage = (postId) => {
-        console.log('상세페이지 가기');
-        //const { MngLikedPostActions } = this.props;
-        //MngLikedPostActions.goToPostPage(postId);
+       this.props.history.push('/post');
     }
 
     render() {
@@ -42,11 +42,11 @@ class LikedPostListComponent extends Component {
     }
 }
 
-export default connect(
+export default withRouter(connect(
     (state) => ({
         modalVisible: state.mngLikedPost.get('modalVisible')
     }),
     (dispatch) => ({
         MngLikedPostActions: bindActionCreators(mngLikedPostActions, dispatch)
     })
-)(LikedPostListComponent);
+)(LikedPostListComponent));
