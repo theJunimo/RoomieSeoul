@@ -28,10 +28,13 @@ function MenuAfLogin({userInfo = {userName: 'Junimo', userId: 'dummyForUserId'},
             <div className={cx('menu-wrap')}>
                 <ul className={cx('menu')}>
                     <li>
+                        <Navigation to = '/search' theme = 'main'>집 검색하기</Navigation>
+                    </li>
+                    <li>
                         <Navigation to = {`/likedpost/${userInfo.userId}`} theme = 'main'>찜한 집</Navigation>
                     </li>
                     <li>
-                        <Navigation to = '/write' theme = 'main'>방 올리기</Navigation>
+                        <Navigation to = '/write' theme = 'main'>집 올리기</Navigation>
                     </li>
                     <li onClick = {handleMenu}>
                         <Navigation theme = 'main'>
