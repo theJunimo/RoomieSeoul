@@ -1,0 +1,17 @@
+
+.contentWrapper{
+    display:flex;
+    
+    &.line{
+        border-top: 1px solid #EBEBEB;
+        border-bottom: 1px solid #EBEBEB;
+    }
+
+    &.line-bottom{
+        border-bottom: 1px solid #EBEBEB;
+    }
+
+    &.line-top{
+        border-top: 1px solid #EBEBEB;
+    }
+}
