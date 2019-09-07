@@ -4,14 +4,20 @@
     @include dividerLine;
 }
 
-.container {
+.SignUpForm {
     color: $fontGray;
+    width: 23rem;
+    margin: auto;
+
+    .dividerLine {
+        @include dividerLine;
+    }
     
     h2 {
         text-align: center;
     }
 
-    .signUp-form {
+    .form {
 
         .field {
             margin-top: 1rem; 
@@ -28,6 +34,7 @@
                 padding: 13px 10px;
                 border: 1px solid #e8e8e8;
                 border-radius: 5px;
+                outline: none;
             }
         }
 

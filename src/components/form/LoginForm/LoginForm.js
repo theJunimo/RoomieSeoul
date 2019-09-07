@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 const LoginForm = () => {
     return (
-        <div className={cx('container')}>
+        <div className={cx('LoginForm')}>
             <h2>로그인</h2>
             <div className={cx('login-form')}>
                 <div className={cx('field')}>

@@ -8,14 +8,14 @@ const cx = className.bind(styles);
 
 const SignUpForm = () => {
     return (
-        <div className={cx('container')}>
+        <div className={cx('SignUpForm')}>
             <SnsLogin/>
             <div className={cx('dividerLine')}></div>
             <h2>회원가입</h2>
-            <div className={cx('signUp-form')}>
+            <div className={cx('form')}>
                 <div className={cx('field')}>
                     <label htmlFor='local-signUp-email'>이메일</label>
-                    <input type='email' id='local-signUp-email' name='email' placeholder='이메일 ex)roomie@email.com' />
+                    <input type='email' id='local-signUp-email' name='email' placeholder='이메일 ex)roomie@email.com' autoComplete='off'/>
                 </div>
                 <div className={cx('field')}>
                     <label htmlFor='local-signUp-pw'>비밀번호</label>
