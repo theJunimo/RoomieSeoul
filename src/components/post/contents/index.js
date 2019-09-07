@@ -1,0 +1,10 @@
+export {default as Profile} from './Profile';
+export {default as Title} from './Title';
+export {default as HouseImg} from './HouseImg';
+export {default as Address} from './Address';
+export {default as RoomType} from './RoomType';
+export {default as Payment} from './Payment';
+export {default as Others} from './Others';
+export {default as HouseInfo} from './HouseInfo';
+export {default as Contact} from './Contact';
+export {default as Map} from './Map';

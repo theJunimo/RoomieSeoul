@@ -1,0 +1,17 @@
+@import 'styles/utils';
+
+.Address{
+    margin: auto;
+    padding: 1rem 0;
+    display: flex;
+    text-align: center;
+
+    p {
+        margin: 0;
+        color: #888888;
+    }
+
+    span{
+        margin-left: 1rem;
+    }
+}
