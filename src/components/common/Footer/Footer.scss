@@ -2,7 +2,7 @@
 
 .footer {
     background: #e9ecef;
-    height: 15rem;
+    height: 12rem;
 
     //내부 아이템 세로 가운데 정렬
     display: flex;
@@ -27,17 +27,6 @@
             font-weight: bold;
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
-        }
-
-        .clientService { //고객센터 정보
-            //폰트 
-            color: #343a40;
-            font-size: 0.9rem;
-
-            //내용 정렬
-            display: flex;
-            flex-direction: column;
-
         }
 
         .detail {
