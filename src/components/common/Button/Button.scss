@@ -175,8 +175,36 @@
                 background-color: $basicBlue; 
                 color: white;
                 font-weight: bold;
-            }
 
+                &.no-pointer {
+                    cursor: default;
+                }
+            }
+        }
+
+        &.post-option {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            margin-bottom: 1rem;
+            background-color: white;
+            border-radius: 5px;
+            border: 2px solid $lightGray;
+            
+            color: $fontGray;
+            font-size: 0.9rem;
+
+            cursor: pointer;
+
+            &.selected {
+                border: 2px solid $basicBlue;
+                background-color: $basicBlue; 
+                color: white;
+                font-weight: bold;
+
+                &.no-pointer {
+                    cursor: default;
+                }
+            }
         }
     }
 }
