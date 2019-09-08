@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './CancelLikeModal.scss';
-import className from 'classnames/bind';
+import classNames from 'classnames/bind';
 import ModalWrapper from 'components/modal/ModalWrapper';
 import Button from 'components/common/Button';
 
-const cx = className.bind(styles);
+const cx = classNames.bind(styles);
 
 const CancelLikeModal = ({modalVisible, cancelLike, closeModal}) => (
     <ModalWrapper type='cancelLike' visible = {modalVisible}>

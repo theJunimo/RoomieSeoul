@@ -20,13 +20,29 @@
         width: 190px;
 
         .sns-icon-div{
-            .sns-icon{
-                display: inline-block;
-                background-color: black;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow:hidden;
+            cursor: pointer;
+
+            .naver-icon{
+                width: 100%;
+                height: 100%;
+                background-image: url(./naver.png);
+                background-size: cover;
+            }
+            .kakao-icon{
+                width: 100%;
+                height: 100%;
+                background-image: url(./kakao.svg);
+                background-size: cover;
+            }
+            .google-icon{
+                width: 100%;
+                height: 100%;
+                background-image: url(./google.svg);
+                background-size: cover;
             }
         }
     }
