@@ -79,6 +79,19 @@
             }
         }
 
+        &.white-blue {
+            width: 9rem;
+            margin: auto;
+            font-size: 1rem;
+            text-align: center;
+
+            padding: 0.5rem 2rem;
+
+            color: #008bff;
+            background-color: white;
+            border-radius: 3px;
+        }
+
         &.support {
             font-size: 0.8rem;
             color: #575654;
