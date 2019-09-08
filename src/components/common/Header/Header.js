@@ -24,7 +24,7 @@ const MenuBfLogin = () => (
 );
 
 //로그인 후 메뉴
-function MenuAfLogin({userInfo = {userName: 'Junimo', userId: 'dummyForUserId'}, handleMenu})  {
+function MenuAfLogin({userInfo = {userName: 'Junimo', userId: 'dummyForUserId'}, handleMenu, visible})  {
 
     return(
         <div className={cx('margin-left-auto')}>
@@ -43,6 +43,7 @@ function MenuAfLogin({userInfo = {userName: 'Junimo', userId: 'dummyForUserId'},
                         <Navigation theme = 'main'>
                             <span className = {cx('profile-img')}></span><span className ={cx('span-margin-right')}>{userInfo.userName}님</span>
                         </Navigation>
+                        {visible? <MyAcntSelectBox/> : null}
                     </li>
                 </ul>
             </div>
@@ -65,10 +66,9 @@ function Header({loginState = true, userInfo}) {
                 <div className = {cx('logo')}>
                     <Link to = "/">ROOMIE SEOUL</Link>
                 </div>
-                {loginState? (<MenuAfLogin handleMenu = {handleMenu}/>) : (<MenuBfLogin />)}
+                {loginState? (<MenuAfLogin handleMenu = {handleMenu} visible={visible}/>) : (<MenuBfLogin />)}
             </div>
         </header>
-        {visible? <MyAcntSelectBox/> : null}
         </React.Fragment>
     );
 }

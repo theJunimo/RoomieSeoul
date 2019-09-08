@@ -1,25 +1,30 @@
 @import 'styles/utils';
 
 .listBox-outer{
-    width: 1400px;
-    position: relative;
-    padding: 0 5rem;
-    margin: 0 auto;
-
-
     .listBox {
         position: absolute;
-        right: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-right: 5rem;
-        color: $fontGray;
         width: 7.3rem;
-        border: 1px solid #e9ecef;
-        border-top: 0;
-        background-color: white;
 
+        margin-top: 1rem;
+        align-items: center;
+        color: $fontGray;
+
+        border: 1px solid #e9ecef;
+        background-color: white;
+        border-radius: 3px;
+        
+        animation-name: slide;
+        animation-duration: 0.2s;
+
+        @keyframes slide {
+            0% {transform: translateY(-20%);}
+            20% {transform: translateY(-15%);}
+            40% {transform: translateY(-10%);}
+            60% {transform: translateY(-5%);}
+            100% {transform: translateY(0);}     
+        } 
     }
 }
 
