@@ -1,0 +1,95 @@
+
+.UserInfo {
+    min-width: 50rem;
+
+    h2{
+        margin-top: 0;
+    }
+
+    .container{
+        display: flex;
+        width: 100%;
+
+        .profile {
+            p{
+                text-align: center;
+            }
+            .img{
+                width: 10rem;
+                height: 10rem;
+                border: 1px solid #e8e8e8;
+            }
+
+            .button-div{
+                padding: 1rem 0;
+            }
+
+        }
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            padding-left: 3rem;
+            
+            .section-nick{
+                .input-div {
+                    width: 12rem;
+                    border: 1px solid #e8e8e8;
+                    border-radius: 4px;
+                    padding: 5px 8px;
+
+                    input {
+                        display: block;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .section-pw{
+                display: flex;
+
+                .wrapper-pw{
+                    .input-div {
+                        width: 12rem;
+                        border: 1px solid #e8e8e8;
+                        border-radius: 4px;
+                        padding: 5px 8px;
+
+                        input {
+                            width: 100%;
+                            display: block;
+                            border: none;
+                            outline: none;
+                            font-size: 1rem;
+                        }
+                    }
+                    
+                    &:last-child {
+                        margin-left: 3rem;
+                    }
+                }
+            }
+
+            .section-alert{
+                min-height: 1rem;
+                margin: 2px;
+                font-size: 0.8rem;
+                color: red;
+            }
+
+            .section-button{
+                display: flex;
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid #e8e8e8;
+
+                .wrapper-button{
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

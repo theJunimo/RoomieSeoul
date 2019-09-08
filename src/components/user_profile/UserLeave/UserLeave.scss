@@ -1,0 +1,30 @@
+
+.UserLeave{
+    min-width: 52rem;
+
+    h2{
+        margin-top: 0;
+    }
+
+    .container {
+
+        .input-div {
+            width: 12rem;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+            padding: 6px 8px;
+
+            input {
+                width: 100%;
+                display: block;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+            }
+        }
+
+        .button-div{
+            margin-top: 2rem;
+        }
+    }
+}
