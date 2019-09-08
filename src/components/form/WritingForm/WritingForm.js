@@ -57,7 +57,7 @@ const WritingForm = ({currentStep,
     }
     return (
 
-        <div className = {cx('container')}>
+        <div className = {cx('WritingForm')}>
             <h1>{getTitle()}</h1>
             <ProgressBar currentStep = {currentStep}/>
             <div className = {cx('innerContainer')}>

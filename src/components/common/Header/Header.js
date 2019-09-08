@@ -13,6 +13,9 @@ const MenuBfLogin = () => (
         <div className = {cx('menu-wrap')}>
             <ul className = {cx('menu')}>
                 <li>
+                    <Navigation to ='/login' theme='main'>집 검색하기</Navigation>
+                </li>
+                <li>
                     <Navigation to ='/login' theme='main'>로그인/회원가입</Navigation>
                 </li>
             </ul>

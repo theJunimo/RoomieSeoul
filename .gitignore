@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+# 지도 키 숨기기
+.Map.js
 # testing
 /coverage
 

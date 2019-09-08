@@ -30,6 +30,55 @@
             }
         }
 
+        &.normal {
+            font-size: 1rem;
+            color: white;
+            text-align: center;
+
+            padding: 6px 12px;
+            
+            background-color: $basicYellow;
+            border: 1px solid transparent;
+            border-radius: 4px;
+
+            &:active, &:hover{
+                background-color: $darkerYellow;
+            }
+
+            &.size {
+                width: 8rem;
+            }
+
+            &.smallfont{
+                font-size: 0.9rem;
+            }
+
+            &.margin-auto{
+                margin:auto;
+            }
+        }
+
+        &.gray {
+            width: 7rem;
+            margin: auto;
+            font-size: 0.9rem;
+            text-align: center;
+
+            padding: 6px 0;
+
+            color: white;
+            background-color: #575654;
+            border-radius: 3px;
+
+            &:hover{
+                background-color: gray;
+            }
+
+            &.no-margin{
+                margin: 0;
+            }
+        }
+
         &.support {
             font-size: 0.8rem;
             color: #575654;
