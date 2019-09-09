@@ -14,10 +14,6 @@ class RoomTypeField extends Component {
         alertModal: false, //alert 모달 보이기
         validate: true //빈 값 있는지 확인
     }
-
-    componentDidMount = () => {
-        window.scrollTo(0,130);
-    }
     
     selectType = (index, item) => {
         this.setState({

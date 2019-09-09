@@ -18,10 +18,6 @@ class OthersField extends Component {
         options: this.props.savedData.options,
         validate: true
     }
-
-    componentDidMount = () => {
-        window.scrollTo(0,130);
-    }
     
     handleValidate = () => {
         this.setState({

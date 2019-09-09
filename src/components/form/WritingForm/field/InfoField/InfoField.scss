@@ -7,7 +7,11 @@
         display: flex;
         min-height: 2.25rem;
     }
-    
+    .subtitle{
+        h2 {
+            text-align: center;
+        }
+    }
     .innerDiv {
         display: flex;
         flex-direction: column;

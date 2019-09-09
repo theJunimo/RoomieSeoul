@@ -11,10 +11,7 @@ class TitleField extends Component{
         numOfCha : 0,//titleInput 글자 수
         validate: true
     }
-    
-    componentDidMount = () => {
-        window.scrollTo(0,130);
-    }
+
     //titleInput 50자 제한
     handleNumOfCha = (e) => {
         const s = e.target.value;
@@ -64,7 +61,7 @@ class TitleField extends Component{
                 {(!validate)? <AlertModal onAnimationEnd={handleValidate}>제목을 입력해주세요!</AlertModal> : null}
             </div>
             <div className = {cx('subTitleDiv')}>
-                <h2 className = {cx('subTitle')}>
+                <h2>
                 지금 살고 있는 집에 대해서 간략한 소개를 해보세요!
                 </h2>
             </div>

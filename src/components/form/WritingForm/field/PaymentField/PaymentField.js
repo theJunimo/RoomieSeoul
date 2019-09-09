@@ -13,10 +13,6 @@ class PaymentField extends Component {
         validate: true //빈 값 있는지 확인
     }   
 
-    componentDidMount = () => {
-        window.scrollTo(0,130);
-    }
-
     checkIfNum = (e) => {
         if(!Number(e.target.value)){
             e.target.value = null;
@@ -65,7 +61,7 @@ class PaymentField extends Component {
                     {(!validate)? <AlertModal onAnimationEnd={handleValidate}>월세는 필수로 입력해주세요!</AlertModal> : null}
                 </div> 
                 <div className = {cx('subTitleDiv')}>
-                    <h2 className = {cx('subTitle')}>
+                    <h2>
                         지불 금액을 입력해주세요.
                     </h2>
                 </div>
