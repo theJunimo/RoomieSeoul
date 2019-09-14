@@ -1,11 +1,11 @@
 import React from 'react';
 import PageTemplate from 'components/common/PageTemplate';
-import SignUpForm from 'components/form/SignUpForm';
+import SignUpFormContainer from 'containers/form/SignUpFormContainer';
 
 const SignUpPage = () => {
     return (
         <PageTemplate>
-            <SignUpForm/>
+            <SignUpFormContainer/>
         </PageTemplate>
     );
 }
