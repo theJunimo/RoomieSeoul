@@ -1,68 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🏠 RoomieSeoul
 
-## Available Scripts
+🙋‍♀️ 🙋‍♂️ 본격 하메/룸메 구하기 사이트!
 
-In the project directory, you can run:
+RoomieSeoul은 함께 살고 싶은 하우스 메이트 / 룸메이트를 찾기 위한 사이트 입니다. 쉐어하우스 호스트가 집에 대한 글을 올리면 쉐어하우스를 구하고 있는 사람이 글을 보고 찜하기를 통해 마음에 드는 쉐어하우스를 보관하거나, 직접 호스트에게 연락 할 수 있습니다. 또한 검색필터를 통해 원하는 쉐어하우스를 검색할 수도있습니다.
 
-### `npm start`
+🛠 본 사이트는 개인의 개발 역량을 키우기 위해 만들어지고 있는 중이며, 사용한 기술 스택은 아래와 같습니다.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Front-end
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+**개발 언어**
+JAVASCRIPT, HTML, CSS
 
-### `npm test`
+**프레임워크**
+React
+SCSS
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**기타 라이브러리**
+Redux, Redux-thunk, axios
 
-### `npm run build`
+**사용 API**
+다음 주소 검색 
+다음 지도 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✨ Back-end
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+**개발언어**
+JAVASCRIPT
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**프레임워크**
+NodeJS / Express
 
-### `npm run eject`
+**데이터베이스**
+MYSQL
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**패키지 매니저**
+npm
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**기타 라이브러리**
+Sequelize
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**사용 API**
+네이버 로그인 / 회원가입
+카카오 로그인 / 회원가입
+구글 로그인 / 회원가입
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**기타 툴**
+Postman
 
-## Learn More
+## 🔥 구현 진척도
+**Front-end**
+ - [x] 로그인/회원가입
+ - [x] 글 올리기
+ - [x]  메인페이지
+ - [x] 글 상세페이지
+ - [x] 내 프로필 관리
+ - [ ] 내가 쓴 글 관리
+ - [ ] 내가 쓴 글 수정하기 
+ - [ ] 쉐어하우스 검색하기 
+ - [ ] 반응형 웹 테스트하기
+ - [ ] 크로스 브라우징 테스트
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Back-end**
+ - [ ] 로그인/회원가입 - 로컬
+ - [ ] 로그인/회원가입 - SNS
+ - [ ] 로그아웃
+ - [ ] 글 올리기 - 이미지 업로드하기
+ - [ ] 글 상세페이지 정보 가져오기
+ - [ ] 메인 페이지 인기글 정보 가져오기
+ - [ ] 유저 프로필 관리
+ - [ ] 유저가 쓴 글 관리
+ - [ ] 집 검색하기
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 👀 기타
+프로젝트에 대한 생생한 경험담은 아래 블로그에서 보실 수 있습니다. 
+👉 [Junimo의 지속가능한 개발 블로그로 가기!](https://sustainable-dev.tistory.com/category/Project%20Log/RoomieSeoul)
