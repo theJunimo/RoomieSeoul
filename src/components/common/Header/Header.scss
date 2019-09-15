@@ -36,42 +36,48 @@
         }
 
         .margin-left-auto {
+            margin: auto 0;
             margin-left: auto;
+
             @include media("<medium") {
                 margin: auto;
             }
 
-            .menu-wrap {
-                margin:0 auto;
+            ul {
+                display:flex;
 
-                .menu {
-                    float:left; 
-                    text-align:center;
+                li { 
+                    display: flex;
+                    flex-direction: column;
+                }
 
-                    li { 
-                        display:inline-block; 
-                        text-align:center;
-                    }
-
-                    li + li {
-                        margin-left: 2rem
-                    }
+                li + li {
+                    margin-left: 2rem
                 }
             }
+
         }
 
-        .profile-img {
-            display: inline-block;
-            background-color: black;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+        .profile{
+            display: flex;
+            cursor: pointer;
 
-            margin-right: 5px;
+            .profile-img {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                border: 1px solid #e8e8e8;
+                margin-right: 5px;
 
-            position: relative;
-            top: 9px;
+                top: 9px;
 
+                background-image: url('./test-userImg2.png');
+                background-size: cover;
+            }
+
+            .user-name {
+                margin: auto;
+            }
         }
     }
 }

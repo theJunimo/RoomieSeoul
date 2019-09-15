@@ -1,33 +1,27 @@
 @import 'styles/utils';
 
 .buttonOuter{
+    display: flex;
     .button {
         vertical-align: middle;
         cursor: pointer;
 
         &.submit {
+            width: 100%;
             font-size: 1rem;
             color: white;
             text-align: center;
-            letter-spacing: 2px;
 
             margin-top: 2.5rem;
-            padding: 6px 12px;
+            padding: 10px 0;
             
             background-color: $basicYellow;
-            border: 1px solid transparent;
             border-radius: 4px;
-            box-shadow: 0 3px #b9bdba;
 
-            &:hover{
+            &:hover, &:active{
                 background-color: $darkerYellow;
             }
 
-            &:active{
-                background-color: $darkerYellow;
-                box-shadow: 0 1px #b9bdba;
-                transform: translateY(4px);
-            }
         }
 
         &.normal {
@@ -77,6 +71,31 @@
             &.no-margin{
                 margin: 0;
             }
+
+            &.validCheck {
+                display: flex;
+                width: 5rem;
+                font-size: 0.8rem;
+                border-radius: 0;
+                height: 100%;
+                
+                .inner {
+                    margin: auto;
+                }
+            }
+        }
+
+        &.white-blue {
+            width: 9rem;
+            margin: auto;
+            font-size: 1rem;
+            text-align: center;
+
+            padding: 0.5rem 2rem;
+
+            color: #008bff;
+            background-color: white;
+            border-radius: 3px;
         }
 
         &.support {

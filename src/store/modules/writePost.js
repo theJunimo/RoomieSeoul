@@ -3,7 +3,7 @@ import { createAction, handleActions } from 'redux-actions';
 import { Map } from 'immutable';
 
 //action types
-const INITIALIZE = 'writepost/INITIALIZE' //상태값 초기화
+const INITIALIZE = 'writePost/INITIALIZE' //상태값 초기화
 const SUBMIT_TITLE = 'writePost/SUBMIT_TITLE'; // title 정보 변경
 const SUBMIT_ROOMTYPE = 'writePost/SUBMIT_ROOMTYPE'; // roomtype 정보 변경
 const SUBMIT_PAYMENT = 'writePost/SUBMIT_PAYMENT'; // payment 정보 변경

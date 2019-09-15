@@ -21,10 +21,12 @@ export default function Search() {
                     <div className = {cx('icon-div')}>
                     <Magnifier/>
                     </div>
-                    <input
-                        type = 'text'
-                        placeholder = '예시) 강남구 쓰리룸 쉐어하우스'>
-                    </input>
+                    <div className = {cx('input-div')}>
+                        <input
+                            type = 'text'
+                            placeholder = '예시) 강남구 쓰리룸 쉐어하우스'>
+                        </input>
+                    </div>
                     <Button theme='normal'>검색하기</Button>
                 </div>
             </div>

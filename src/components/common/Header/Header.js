@@ -24,28 +24,28 @@ const MenuBfLogin = () => (
 );
 
 //로그인 후 메뉴
-function MenuAfLogin({userInfo = {userName: 'Junimo', userId: 'dummyForUserId'}, handleMenu})  {
+function MenuAfLogin({userInfo = {userName: 'Junimo', userId: 'dummyForUserId'}, handleMenu, visible})  {
 
     return(
         <div className={cx('margin-left-auto')}>
-            <div className={cx('menu-wrap')}>
-                <ul className={cx('menu')}>
-                    <li>
-                        <Navigation to = '/search' theme = 'main'>집 검색하기</Navigation>
-                    </li>
-                    <li>
-                        <Navigation to = {`/likedpost/${userInfo.userId}`} theme = 'main'>찜한 집</Navigation>
-                    </li>
-                    <li>
-                        <Navigation to = '/write' theme = 'main'>집 올리기</Navigation>
-                    </li>
-                    <li onClick = {handleMenu}>
-                        <Navigation theme = 'main'>
-                            <span className = {cx('profile-img')}></span><span className ={cx('span-margin-right')}>{userInfo.userName}님</span>
-                        </Navigation>
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li>
+                    <Navigation to = '/search' theme = 'main'>집 검색하기</Navigation>
+                </li>
+                <li>
+                    <Navigation to = {`/likedpost/${userInfo.userId}`} theme = 'main'>찜한 집</Navigation>
+                </li>
+                <li>
+                    <Navigation to = '/write' theme = 'main'>집 올리기</Navigation>
+                </li>
+                <li onClick = {handleMenu}>
+                    <div className = {cx('profile')}>
+                        <div className = {cx('profile-img')}></div>
+                        <div className = {cx('user-name')}>{userInfo.userName}님</div>
+                    </div>
+                    {visible? <MyAcntSelectBox/> : null}
+                </li>
+            </ul>
         </div>
     );
 }
@@ -65,10 +65,9 @@ function Header({loginState = true, userInfo}) {
                 <div className = {cx('logo')}>
                     <Link to = "/">ROOMIE SEOUL</Link>
                 </div>
-                {loginState? (<MenuAfLogin handleMenu = {handleMenu}/>) : (<MenuBfLogin />)}
+                {loginState? (<MenuAfLogin handleMenu = {handleMenu} visible={visible}/>) : (<MenuBfLogin />)}
             </div>
         </header>
-        {visible? <MyAcntSelectBox/> : null}
         </React.Fragment>
     );
 }

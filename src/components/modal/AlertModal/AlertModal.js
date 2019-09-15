@@ -7,10 +7,10 @@ const cx = classNames.bind(styles);
 
 class AlertModal extends Component {
     render(){
-        const{children, onAnimationEnd} = this.props;
+        const{ children, onAnimationEnd } = this.props;
 
         return(
-            <div className = {cx('alertDiv')} onAnimationEnd = {onAnimationEnd}>
+            <div className = {cx('alertDiv')} onAnimationEnd = { onAnimationEnd }>
                 <div className = {cx('alertDiv-inner')}>
                     {children}
                 </div>

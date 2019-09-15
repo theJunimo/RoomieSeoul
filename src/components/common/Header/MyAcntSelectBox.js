@@ -8,13 +8,13 @@ const cx = classNames.bind('styles');
 export default function MyAcntSelectBox() {
  
     function ItemList() {
-        const items = ['로그아웃', '내가 쓴 글', '프로필관리']
+        const items = ['로그아웃', '프로필 관리']
 
         return items.map((item, idx) => (
             <Navigation key = {idx}
                         theme = 'selectBox'
                         className = {cx('item')} 
-                        to = {idx === 0? '/logout' : (idx === 1)? '/mypage/mypost' : '/mypage/myprofile'}>
+                        to = {idx === 0? '/logout' : '/mypage/myprofile'}>
             {item}
             </Navigation>
             ))

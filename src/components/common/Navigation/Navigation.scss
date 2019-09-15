@@ -3,6 +3,7 @@
 .nav {
     color: $fontGray;
     cursor: pointer;
+    margin: auto;
 
     &.main {
         &:active, &:hover {

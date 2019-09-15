@@ -21,10 +21,6 @@ class InfoField extends Component {
         alertMsg: '연락처와 사진은 필수입니다.'
     }
 
-    componentDidMount = () => {
-        window.scrollTo(0,130);
-    }
-
     componentDidUpdate(prevState) {
         if (prevState.validate!== this.state.validate) {
             window.scrollTo(0,130);
@@ -146,7 +142,7 @@ class InfoField extends Component {
                 <div className = {cx('spotForModal')}>
                     {(!validate)? <AlertModal onAnimationEnd={handleValidate}>{alertMsg}</AlertModal> : null}
                 </div> 
-                <div>
+                <div className = {cx('subtitle')}>
                     <h2>
                         더 자세한 정보를 입력해주세요.
                     </h2>
