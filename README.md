@@ -12,15 +12,13 @@ RoomieSeoul은 함께 살고 싶은 하우스 메이트 / 룸메이트를 찾기
 JAVASCRIPT, HTML, CSS
 
 **프레임워크**
-React
-SCSS
+React, SCSS
 
 **기타 라이브러리**
 Redux, Redux-thunk, axios
 
 **사용 API**
-다음 주소 검색 
-다음 지도 
+다음 주소 검색, 다음 지도 
 
 ## ✨ Back-end
 
@@ -40,9 +38,7 @@ npm
 Sequelize
 
 **사용 API**
-네이버 로그인 / 회원가입
-카카오 로그인 / 회원가입
-구글 로그인 / 회원가입
+네이버 로그인, 카카오 로그인, 구글 로그인
 
 **기타 툴**
 Postman
